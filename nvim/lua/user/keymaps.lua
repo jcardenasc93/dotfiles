@@ -1,0 +1,96 @@
+M = {}
+local opts = { noremap = true, silent = true }
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+--Remap space as leader key
+keymap("n", "<Space>", "", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
+-- --------------- Normal Mode -------------------------------
+-- Window navigation
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+
+-- Resize windows
+keymap("n", "<leader>k", ":resize -5<CR>", opts)
+keymap("n", "<leader>j", ":resize +5<CR>", opts)
+keymap("n", "<leader>h", ":vertical resize -10<CR>", opts)
+keymap("n", "<leader>l", ":vertical resize +10<CR>", opts)
+
+
+-- General
+keymap("n", "<leader>q", ":q<CR>", opts)
+keymap("n", "<leader>s", ":w<CR>", opts)
+keymap("n", "<leader>n", ":noh<CR>", opts)
+keymap("n", "<leader>yp", ":let @+ = expand(\"%\")<CR>", opts)
+keymap("n", "<leader>yl", ":let @+ = expand(\"%\") . ':' . line(\".\")<CR>", opts)
+
+-- I hate typing these
+keymap("n", "<leader>h", "^", opts)
+keymap("n", "<leader>l", "$", opts)
+keymap("v", "<leader>h", "^", opts)
+keymap("v", "<leader>l", "$", opts)
+keymap("x", "<leader>h", "^", opts)
+keymap("x", "<leader>l", "$", opts)
+keymap("o", "<leader>h", "^", opts)
+keymap("o", "<leader>l", "$", opts)
+
+-- Quote words
+--keymap("n", "<leader>qu", "ciw", opts)
+
+--Nvim Tree
+keymap("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
+
+-- Comment
+require('Comment').setup()
+
+-- Telescope
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", {})
+keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
+keymap("n", "<leader>fw", ":lua require(\"telescope.builtin\").grep_string", {})
+keymap('n', '<leader>fw', '<cmd>lua require(\'telescope.builtin\').grep_string({search = vim.fn.expand("<cword>")})<CR>', {})
+keymap('n', '<leader>fb', ':Telescope file_browser<CR>', {})
+keymap('n', '<leader>bb', ':Telescope buffers<CR>', {})
+
+-- Spectre (Replace text in multiples files)
+keymap("n", "<leader>fr", "<cmd>lua require('spectre').open()<CR>", opts)
+
+-- Harpoon
+keymap('n', '<leader>al', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', {})
+keymap('n', '<leader>aa', ':lua require("harpoon.mark").add_file()<CR>', {})
+keymap('n', '<leader>ah', ':lua require("harpoon.ui").nav_file(1)<CR>', {})
+keymap('n', '<leader>at', ':lua require("harpoon.ui").nav_file(2)<CR>', {})
+keymap('n', '<leader>an', ':lua require("harpoon.ui").nav_file(3)<CR>', {})
+keymap('n', '<leader>as', ':lua require("harpoon.ui").nav_file(4)<CR>', {})
+
+-- Lazygit
+keymap("n", "<leader>gi", ":FloatermNew lazygit<CR>", opts)
+
+-- Maximizer
+keymap("n", "<leader>m", ":MaximizerToggle<CR>", opts)
+
+-- Symbols outline
+keymap("n", "<leader>so", ":SymbolsOutline<CR>", opts)
+
+-- Easymotion
+keymap("n", "<leader>f", "<Plug>(easymotion-s2)", opts)
+
+
+
+----------------------- Visual mode -------------
+-- Maximizer
+keymap("v", "<leader>m", ":MaximizerToggle<CR>gv", opts)
+
+return M

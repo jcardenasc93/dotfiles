@@ -1,0 +1,339 @@
+set number
+set numberwidth=1
+set clipboard=unnamed
+"syntax enable
+syntax sync minlines=10000
+set redrawtime=10000
+set re=2
+set showcmd
+set encoding=UTF-8
+set showmatch
+set sw=2
+set tabstop=2
+set softtabstop=2
+set expandtab
+set autoindent
+set smarttab
+set shiftwidth=2
+set relativenumber
+set cursorline
+set autochdir
+set laststatus=2  " always display the status line
+set noshowmode
+set scrolloff=7
+set backspace=indent,eol,start
+set autoread
+
+" Enable folding
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i useset foldmethod=indent
+set clipboard+=unnamedplus " set system clipboard as default
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+call plug#begin('~/.vim/plugged')
+" Themes"
+Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
+" IDE
+Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdtree'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'kassio/neoterm'
+"Plug 'sheerun/vim-polyglot'
+Plug 'vim-python/python-syntax'
+Plug 'vim-syntastic/syntastic'
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch' 
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " autocomplete
+Plug 'preservim/nerdcommenter'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'frazrepo/vim-rainbow'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'mindriot101/vim-yapf'
+Plug 'tpope/vim-fugitive' " Git integration
+Plug 'tpope/vim-rhubarb' " Git integration
+Plug 'yegappan/greplace' " Replace in simultaneus files
+Plug 'christoomey/vim-tmux-runner'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+Plug 'airblade/vim-rooter'
+Plug 'mattn/emmet-vim' " HTML & CSS editor
+" Hex Highlighting
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'valloric/MatchTagAlways'
+Plug 'Yggdroot/indentLine'
+Plug 'djoshea/vim-autoread'
+" CSV Files
+Plug 'mechatroner/rainbow_csv'
+Plug 'ryanoasis/vim-devicons' "file icons
+" Flutter
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+
+Plug 'voldikss/vim-floaterm'
+Plug 'wellle/context.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " md Preview
+Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+Plug 'ThePrimeagen/harpoon'
+Plug 'tpope/vim-eunuch'
+
+" Go
+Plug 'fatih/vim-go'
+call plug#end()
+
+let g:gruvbox_contrast_dark = "hard"
+let g:gruvbox_transparent_bg=1
+set termguicolors
+colorscheme gruvbox
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
+
+let mapleader=" "
+let g:neoterm_default_mod='belowright' " open terminal in bottom split
+let g:neoterm_size=16 " terminal split size
+let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
+let $VIM_DIR=expand('%:p:h')
+
+"Lightline
+let g:lightline = {
+			\ 'colorscheme': 'wombat',
+			\ 'active': {
+			\		'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
+			\		'right': [['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+			\	},
+			\ 'inactive': {
+			\		'left': [['inactive'], ['relativepath']],
+			\		'right': [['bufnum']]
+			\ },
+			\ 'component': {
+			\		'bufnum': '%n',
+			\		'inactive': 'inactive'
+			\ },
+			\ 'component_function': {
+			\		'gitbranch': 'gitbranch#name',
+			\ },
+			\ 'subseparator': {
+			\		'left': '',
+			\		'right': ''
+			\ }
+			\ }
+
+" kite
+"let g:kite_supported_languages = ['python']
+"let g:kite_tab_complete=1
+"set completeopt+=menuone
+"set completeopt+=noselect
+"set completeopt+=noinsert
+"set completeopt+=preview
+"autocmd CompleteDone * if !pumvisible() | pclose | endif
+"nmap <silent> gd :KiteGotoDefinition<CR>
+
+
+" Adds support for pipenv environments
+let pipenv_venv_path = system('pipenv --venv')
+" The above system() call produces a non zero exit code whenever
+" a proper virtual environment has not been found.
+" So, second, we only point YCM to the virtual environment when
+" the call to 'pipenv --venv' was successful.
+" Remember, that 'pipenv --venv' only points to the root directory
+" of the virtual environment, so we have to append a full path to
+" the python executable.
+if v:shell_error == 0
+  let venv_path = substitute(pipenv_venv_path, '\n', '', '')
+  let g:syntastic_python_python_exec = venv_path . '/bin/python'
+endif
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+" Python syntax
+let g:python_highlight_all = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_w = 0
+nnoremap <C-w>E :SyntasticCheck<CR>
+
+" coc
+"autocmd FileType python let b:coc_suggest_disable = 1
+autocmd FileType scss setl iskeyword+=@-@
+
+" Trigger autocomplete
+if &filetype == 'python'
+  inoremap <C-space> <C-x><C-u>
+else
+  inoremap <silent><expr> <C-space> coc#refresh()
+  " coc Remap keys
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+  "inoremap <silent><expr> <c-space> coc#refresh()
+endif
+
+" Use <Tab> and <S-Tab> for navigate completion list                            
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"                        
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Easy motion shortcut
+nmap <Leader>f <Plug>(easymotion-s2)
+
+" NERDTree
+nmap <Leader>b :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
+let g:NERDTreeMinimalUI=1
+
+
+" FZF
+map <leader>ff :Files<CR>
+nnoremap <leader>fg :Rg<CR>
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:fzf_preview_window = ['right:60%', 'ctrl-/']
+let $FZF_DEFAULT_OPTS="--ansi --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+map <leader>bb :Buffers<CR>
+map <leader>bp :b#<CR>
+
+nmap <Leader>q :q<CR>
+nmap <Leader>s :w<CR>
+"tnoremap <Esc> <C-\><C-N>
+nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+" Get text in files with Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+" Specify root directories
+"let g:rooter_patterns = ['>LendingFront']
+
+" Toggle terminal
+"nmap <Leader>t :Ttoggle<CR> 
+
+" Use <c-space> to trigger completion
+inoremap <C-space> <C-x><C-u>
+
+"if &filetype == 'javascript' || &filetype == 'python'
+  "inoremap <c-space> <C-x><C-u>
+"else
+  "inoremap <silent><expr> <c-space> coc#refresh()
+"endif 
+
+" NERDCommenter
+nmap <Leader>c <Plug>NERDCommenterToggle
+vmap <Leader>c <Plug>NERDCommenterToggle<CR>gv
+
+" Activate color brackets
+let g:rainbow_active = 1
+
+" Python indentation
+augroup pscbindings
+  autocmd! pscbindings
+  "autocmd Filetype python nmap <buffer> <Leader>i :! yapf --in-place --recursive --style="{based_on_style: pep8, indent_width: 4}" %<CR>
+  autocmd Filetype python nmap <buffer> <Leader>i :! black %<CR>
+augroup end
+
+" Resize windows
+nmap <Leader>h :vertical resize -10<CR>
+nmap <Leader>l :vertical resize +10<CR>
+nmap <Leader>j :resize +5<CR>
+nmap <Leader>k :resize -5<CR>
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
+
+" Quote words
+nnoremap <Leader>q" ciw""<Esc>P
+nnoremap <Leader>q' ciw''<Esc>P
+
+" Move between windows
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+
+" Maximizer remap
+nnoremap <Leader>m :MaximizerToggle<CR>
+vnoremap <Leader>m :MaximizerToggle<CR>gv
+
+" Vimspector remap
+let g:vimspector_enable_mappings = 'HUMAN'
+nmap <Leader>dd :call vimspector#Launch()<CR>
+nmap <Leader>ds <Plug>VimspectorStop<CR>
+nmap <leader>dx :VimspectorReset<CR>
+nmap <Leader>de :VimspectorEval
+nmap <Leader>dw :VimspectorWatch
+nmap <Leader>do :VimspectorShowOutput
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
+
+nmap <Leader>dc <Plug>VimspectorContinue
+nmap <Leader>dn <Plug>VimspectorStepOver
+nmap <Leader>din <Plug>VimspectorStepInto
+nmap <Leader>dot <PLug>VimspectorStepOut
+nmap <Leader>dbp <Plug>VimspectorToggleBreakpoint
+nmap <Leader>dcb <Plug>VimspectorToggleConditionalBreakpoint
+nmap <Leader>drc <Plug>VimspectorRunToCursor
+
+" Emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key=','
+
+" Color highlighting
+let g:Hexokinase_highlighters = ['backgroundfull']
+let g:Hexokinase_optInPatterns = [
+\     'full_hex',
+\     'triple_hex',
+\     'rgb',
+\     'rgba',
+\     'hsl',
+\     'hsla',
+\     'colour_names'
+\ ]
+
+" Floatterm settings
+let g:floaterm_gitcommit='floaterm'
+let g:floaterm_autoinsert=1
+let g:floaterm_width=0.9
+let g:floaterm_height=0.85
+let g:floaterm_wintitle=0
+let g:floaterm_autoclose=1
+let g:floaterm_keymap_toggle = '<F1>'
+let g:floaterm_keymap_next   = '<F2>'
+let g:floaterm_keymap_prev   = '<F3>'
+let g:floaterm_keymap_new    = '<F4>'
+nmap <Leader>gi :FloatermNew lazygit<CR>
+
+" Copy path, relative and line
+nmap <Leader>yp :let @+ = expand("%")<CR>
+nmap <Leader>yl :let @+ = expand("%") . ':' . line(".")<CR>
+
+" Context
+let g:context_presenter = 'preview'
+
+
+" Markdown preview
+let g:mkdp_auto_close = 0
+
+" Harpoon config
+noremap <Leader>ss :lua require("harpoon.ui").toggle_quick_menu()<CR>
+noremap <Leader>sa :lua require("harpoon.mark").add_file()<CR>
+noremap <Leader>sg :lua require("harpoon.ui").nav_file(1)<CR>
+noremap <Leader>sc :lua require("harpoon.ui").nav_file(2)<CR>
+noremap <Leader>sr :lua require("harpoon.ui").nav_file(3)<CR>
+noremap <Leader>sl :lua require("harpoon.ui").nav_file(4)<CR>
+
+" Go
+let g:go_def_mapping_enabled=0
+
+nnoremap <Leader>n :noh<CR>

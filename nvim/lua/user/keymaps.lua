@@ -60,7 +60,8 @@ require('Comment').setup()
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", {})
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
 keymap("n", "<leader>fw", ":lua require(\"telescope.builtin\").grep_string", {})
-keymap('n', '<leader>fw', '<cmd>lua require(\'telescope.builtin\').grep_string({search = vim.fn.expand("<cword>")})<CR>', {})
+keymap('n', '<leader>fw', '<cmd>lua require(\'telescope.builtin\').grep_string({search = vim.fn.expand("<cword>")})<CR>'
+  , {})
 keymap('n', '<leader>fb', ':Telescope file_browser<CR>', {})
 keymap('n', '<leader>bb', ':Telescope buffers<CR>', {})
 
@@ -87,6 +88,12 @@ keymap("n", "<leader>so", ":SymbolsOutline<CR>", opts)
 -- Easymotion
 keymap("n", "<leader>f", "<Plug>(easymotion-s2)", opts)
 
+-- Toogle last buffers
+keymap("n", "<leader>bp", "<Cmd>b#<CR>", {})
+
+-- Python black formatting
+-- NOTE: This needs to be updated
+keymap("n", "<leader>i", "<Cmd>!black %<CR>", {})
 
 
 ----------------------- Visual mode -------------

@@ -39,6 +39,7 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
+
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
@@ -100,21 +101,21 @@ return packer.startup(function(use)
   use "mechatroner/rainbow_csv"
 
   -- Flutter
-  use "dart-lang/dart-vim-plugin"
-  use "thosakwe/vim-flutter"
+  -- use "dart-lang/dart-vim-plugin"
+  -- use "thosakwe/vim-flutter"
 
   --use "iamcco/markdown-preview.nvim", { "do": "cd app && yarn install"  }  --md Preview
   use "ThePrimeagen/harpoon"
   use "tpope/vim-eunuch"
 
   -- Go
-  use "fatih/vim-go"
+  -- use "fatih/vim-go"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "tom-anders/telescope-vim-bookmarks.nvim"
   use "lalitmee/browse.nvim"
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- cmp plugins
@@ -131,6 +132,7 @@ return packer.startup(function(use)
     "ray-x/lsp_signature.nvim",
   }
   use 'simrat39/symbols-outline.nvim'
+  use "lukas-reineke/lsp-format.nvim"
 
   -- Treesitter
   use {
@@ -139,6 +141,9 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
   use 'nvim-treesitter/nvim-treesitter-context'
+
+
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

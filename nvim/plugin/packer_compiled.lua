@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["auto-session"] = {
     loaded = true,
     path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/auto-session",
@@ -104,16 +109,6 @@ _G.packer_plugins = {
     path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["dart-vim-plugin"] = {
-    loaded = true,
-    path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
-    url = "https://github.com/dart-lang/dart-vim-plugin"
-  },
-  ["emmet-vim"] = {
-    loaded = true,
-    path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/emmet-vim",
-    url = "https://github.com/mattn/emmet-vim"
-  },
   gruvbox = {
     loaded = true,
     path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -133,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/indentLine",
     url = "https://github.com/Yggdroot/indentLine"
+  },
+  ["lsp-format.nvim"] = {
+    loaded = true,
+    path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/lsp-format.nvim",
+    url = "https://github.com/lukas-reineke/lsp-format.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -284,11 +284,6 @@ _G.packer_plugins = {
     path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
   },
-  ["vim-flutter"] = {
-    loaded = true,
-    path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/vim-flutter",
-    url = "https://github.com/thosakwe/vim-flutter"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -298,11 +293,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/vim-gitbranch",
     url = "https://github.com/itchyny/vim-gitbranch"
-  },
-  ["vim-go"] = {
-    loaded = true,
-    path = "/Users/jcardenas/.local/share/nvim/site/pack/packer/start/vim-go",
-    url = "https://github.com/fatih/vim-go"
   },
   ["vim-illuminate"] = {
     loaded = true,

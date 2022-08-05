@@ -43,3 +43,8 @@ require 'lspconfig'.sumneko_lua.setup {
     }
   }
 }
+
+-- HTML
+require 'lspconfig'.html.setup {
+  on_attach = on_attach
+}

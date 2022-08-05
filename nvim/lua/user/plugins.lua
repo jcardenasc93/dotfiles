@@ -89,13 +89,13 @@ return packer.startup(function(use)
   use "tmux-plugins/vim-tmux-focus-events"
   use "szw/vim-maximizer"
   use "notjedi/nvim-rooter.lua"
-  use "mattn/emmet-vim" -- HTML & CSS editor
   --" Hex Highlighting
   --use "rrethy/vim-hexokinase", { "do": "make hexokinase" }
 
   --use "valloric/MatchTagAlways"
   use "Yggdroot/indentLine"
   use "djoshea/vim-autoread"
+  use "simrat39/symbols-outline.nvim" -- Tags navigation
 
   -- CSV Files
   use "mechatroner/rainbow_csv"
@@ -124,6 +124,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "L3MON4D3/LuaSnip" -- Snippets
 
   -- LSP
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP

@@ -95,6 +95,21 @@ keymap("n", "<leader>bp", "<Cmd>b#<CR>", {})
 -- NOTE: This needs to be updated
 keymap("n", "<leader>i", "<Cmd>!black %<CR>", {})
 
+-- Debugging DAP
+keymap("n", "<leader>da", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>", {})
+keymap("n", "dac", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", {})
+keymap("n", "<leader>lb", "<Cmd>Telescope dap list_breakpoints<CR>", {})
+keymap("n", "<leader>cb", "<Cmd>lua require'dap'.clear_breakpoints()<CR>", {})
+keymap("n", "dd", "<Cmd>lua require'dap'.continue()<CR>", {})
+keymap("n", "<leader>dk", "<Cmd>lua require'dap'.terminate()<CR>", {})
+keymap("n", "<leader>sn", "<Cmd>lua require'dap'.step_over()<CR>", {})
+keymap("n", "<leader>si", "<Cmd>lua require'dap'.step_into()<CR>", {})
+keymap("n", "<leader>so", "<Cmd>lua require'dap'.step_out()<CR>", {})
+keymap("n", "<leader>rc", "<Cmd>lua require'dap'.run_to_cursor()<CR>", {})
+keymap("n", "<leader>dc", "<Cmd>lua require'dap'.repl.open()<CR>", {})
+keymap("n", "dD", "<Cmd>lua require('dapui').open()<CR>", {})
+keymap("n", "dC", "<Cmd>lua require('dapui').close()<CR>", {})
+
 
 ----------------------- Visual mode -------------
 -- Maximizer

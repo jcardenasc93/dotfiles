@@ -76,7 +76,6 @@ return packer.startup(function(use)
   use 'lewis6991/impatient.nvim'
   use "karb94/neoscroll.nvim"
   use "folke/todo-comments.nvim"
-  use "rmagatti/auto-session"
   use "RRethy/vim-illuminate"
   -- Float term
   use "voldikss/vim-floaterm"
@@ -132,7 +131,6 @@ return packer.startup(function(use)
   use {
     "ray-x/lsp_signature.nvim",
   }
-  use 'simrat39/symbols-outline.nvim'
   use "lukas-reineke/lsp-format.nvim"
 
   -- Treesitter
@@ -144,7 +142,13 @@ return packer.startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-context'
 
 
-
+  -- Debugger
+  use "mfussenegger/nvim-dap"
+  use "mfussenegger/nvim-dap-python"
+  use "leoluz/nvim-dap-go"
+  use "rcarriga/nvim-dap-ui"
+  use "theHamsta/nvim-dap-virtual-text"
+  use "nvim-telescope/telescope-dap.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

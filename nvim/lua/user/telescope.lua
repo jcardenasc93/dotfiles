@@ -1,6 +1,6 @@
 local fb_actions = require "telescope".extensions.file_browser.actions
 
-require ('telescope').setup{
+require('telescope').setup {
   defaults = {},
   extensions = {
     file_browser = {
@@ -18,4 +18,5 @@ require ('telescope').setup{
     },
   },
 }
-require ('telescope').load_extension('fzf')
+require('telescope').load_extension('fzf')
+require('dapui').setup()

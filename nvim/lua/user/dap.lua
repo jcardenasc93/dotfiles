@@ -11,5 +11,17 @@ end
 dap.listeners.before.exited["dapui_config"] = function()
   dapui.close()
 end
+
 -- List of languages
-require("dap-go").setup()
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    require("dap-go").setup()
+  end
+})
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "python",
+--   callback = function()
+--     -- require("dap-python").setup("~/.pyenv/versions/3.9.8/bin/python")
+--   end
+-- })

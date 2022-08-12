@@ -12,10 +12,11 @@ local on_attach = function(client)
   vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = 0 })
   vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, { buffer = 0 })
   vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { buffer = 0 })
-  vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", { buffer = 0 })
+  vim.keymap.set("n", "<leader>dll", "<cmd>Telescope diagnostics<CR>", { buffer = 0 })
   vim.keymap.set("n", "<leader>ds", vim.diagnostic.show, { buffer = 0 })
   vim.keymap.set("n", "<leader>do", vim.diagnostic.hide, { buffer = 0 })
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = 0 })
+  vim.keymap.set("n", "<leader>dl", vim.diagnostic.setqflist, { buffer = 0 })
   vim.keymap.set('n', '<space>i', vim.lsp.buf.formatting, { buffer = 0 })
 end
 

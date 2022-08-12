@@ -57,9 +57,10 @@ keymap("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
 require('Comment').setup()
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", {})
+keymap("n", "<leader>ff",
+  "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
+  {})
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
-keymap("n", "<leader>fw", ":lua require(\"telescope.builtin\").grep_string", {})
 keymap('n', '<leader>fw', '<cmd>lua require(\'telescope.builtin\').grep_string({search = vim.fn.expand("<cword>")})<CR>'
   , {})
 keymap('n', '<leader>fb', ':Telescope file_browser<CR>', {})

@@ -17,6 +17,18 @@ require('telescope').setup {
       -- },
     },
   },
+  pickers = {
+    live_grep = {
+      additional_args = function()
+        return { "--hidden" }
+      end
+    },
+    find_files = {
+      additional_args = function()
+        return { "--hidden" }
+      end
+    }
+  }
 }
 require('telescope').load_extension('fzf')
 require('dapui').setup()

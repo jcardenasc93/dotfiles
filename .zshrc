@@ -187,17 +187,19 @@ export GO111MODULE=auto
 alias ne='nvim'
 alias syncdots='cd ~/dotfiles && sh sync_dotfiles.sh'
 
-# fh() {
-# local files
-#   IFS=$'\n' files=($(find ~ | fzf --query="$1" --multi --select-1 --exit-0))
-#   [[ -n "$files" ]] && ne "${files[@]}"
-# }
-#
-# fp() {
-# local files
-#   IFS=$'\n' files=($(find ~/Documents | fzf --query="$1" --multi --select-1 --exit-0))
-#   [[ -n "$files" ]] && ne "${files[@]}"
-# }
+
+fp() {
+  cd $(find ~/Documents -type d -print | fzf) && ne .
+}
+
+nconf() {
+  cd ~/.config/nvim && ne .
+}
+
+ff() {
+  cd ~/ && ne $(rg --files --hidden --follow --glob=\!Library | fzf)
+
+}
 
 # Watcher (Pinterest)
 alias rwatcher='cd ~/code && CODE_PATH=$PWD; TRUNC_PATH=${PWD#"$HOME"/}/; python ~/code/pinboard/bin/watcher.py -s $CODE_PATH jcardenas@devrestricted-jcardenas:$TRUNC_PATH --exclude=/go-cache --exclude=/bin --exclude=/pkg --exclude=/go --exclude=/build --exclude=/manaslib --exclude \*flymake\* --exclude=dev_files --exclude=/tmp --exclude ~/code/pinboard/.#\* --exclude-git --exclude .#\*'

@@ -36,9 +36,11 @@ local options = {
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-vim.cmd([[let g:gruvbox_contrast_dark = "soft"]])
+
+vim.cmd([[let g:gruvbox_contrast_dark = "dark"]])
 vim.cmd([[let g:gruvbox_transparent_bg=1]])
 vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[highlight Normal ctermbg=NONE guibg=NONE]])
 
 -- Floatterm settings
 vim.cmd([[let g:floaterm_gitcommit='floaterm']])

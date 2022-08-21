@@ -16,3 +16,6 @@ rsync -avu "$HOME/.tmux-cht-languages" ".tmux-cht-languages"
 # mkdir nvim
 rsync -avu --delete "$HOME/.config/nvim/" "nvim/"
 
+# Starship
+rsync -avu "$HOME/.config/starship.toml" "starship.toml"
+

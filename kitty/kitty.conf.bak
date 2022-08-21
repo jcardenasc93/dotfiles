@@ -8,22 +8,24 @@
 # bold_font Operator Mono Thick
 # bold_italic_font Operator Mono Medium
  #font_family      Input Mono
-#font_family      Menlo
+# font_family      Menlo
 #font_family      Roboto Mono
-font_family      Hack Nerd Font Mono
+# font_family      Hack Nerd Font Mono
+font_family      Go-Mono Nerd Font
+# font_family      Overpass Nerd Font
 italic_font      auto
 bold_font        auto
 bold_italic_font auto
 
 # Font size (in pts)
-font_size        14.0
+font_size        14.5
 
 # The foreground color
 # foreground       #a5a5a5
 
 # The background color
-# background       #262626
-background_opacity 0.95
+#background       #262626
+background_opacity 0.8
 
 # The foreground for selections
 # selection_foreground #2f2f2f
@@ -255,8 +257,8 @@ symbol_map codepoints Hack Nerd Font Mono
 # For example:
 #
 #symbol_map U+E0A0-U+E0A2,U+E0B0-U+E0B3 PowerlineSymbols
-#hide_window_decorations yes
-#hide_window_decorations titlebar-only
+hide_window_decorations yes
+hide_window_decorations titlebar-only
 macos_hide_titlebar yes
 #macos_option_as_alt yes
 
@@ -277,6 +279,6 @@ watcher ${HOME}/.fig/tools/kitty-integration.py
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark
+# Gruvbox Dark Soft
 include current-theme.conf
 # END_KITTY_THEME

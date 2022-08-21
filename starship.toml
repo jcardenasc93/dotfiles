@@ -1,0 +1,26 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# git
+[git_branch]
+ignore_branches = []
+style = "bold #25eacd"
+
+# Go
+[golang]
+symbol = "ﳑ "
+format = "[$symbol](fg:#79D4FD)[$version](bold #79D4FD) "
+
+# Python
+[python]
+symbol = " "
+format = "[$symbol](fg:#8BC34A)[$version](bold #8BC34A) "
+
+# Lua
+[lua]
+symbol = " "
+style = "bold #030380"
+format = "[$symbol($version )]($style)"

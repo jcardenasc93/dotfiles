@@ -70,10 +70,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git copypath dirhistory history zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git copypath dirhistory history zsh-syntax-highlighting zsh-autosuggestions asdf)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $HOME/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # User configuration
 
@@ -114,75 +114,16 @@ export PATH="/usr/local/opt/bzip2/bin:$PATH"
 #export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 #export CPPFLAGS="-I/usr/local/opt/sqlite/include"
 
-
-# Pyenv
-# Pyenv conf
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  #eval "$(pyenv init --path)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-eval "$(pyenv init -)"
-
 # Bat theme
+alias cat=bat
 export BAT_THEME="gruvbox-dark"
 
-# NVM (Node version manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
-source "/Users/jcardenas/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
-export SPACESHIP_DIR_TRUNC=1
-export SPACESHIP_PROMPT_SYMBOL=''
-export SPACESHIP_VENV_SHOW=false
-export SPACESHIP_PYENV_COLOR=#8BC34A
-export SPACESHIP_BATTERY_SHOW=false
-export SPACESHIP_VI_MODE_SHOW=false
-export SPACESHIP_PYENV_SYMBOL=''
-export SPACESHIP_GIT_STATUS_PREFIX='  '
-export SPACESHIP_GIT_STATUS_SUFFIX=''
-export SPACESHIP_DOCKER_SHOW=false
-export SPACESHIP_PROMPT_DEFAULT_PREFIX=' '
-export SPACESHIP_PYENV_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
-export SPACESHIP_GIT_BRANCH_COLOR=#8ED1FC
-export SPACESHIP_GIT_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
-export SPACESHIP_PACKAGE_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
-export SPACESHIP_NODE_SHOW=true
-export SPACESHIP_NODE_PREFIX=$SPACESHIP_PROMPT_DEFAULT_PREFIX
-export SPACESHIP_NODE_SYMBOL=''
-export SPACESHIP_PACKAGE_COLOR=#8BC34A
-export SPACESHIP_GOLANG_SYMBOL='ﳑ '
 
 # Go setup
-export GOPATH=$HOME/go
+# export GOPATH=$HOME/go
 # export GOBIN=$GOPATH/bin
 # export PATH=$PATH:$GOBIN
-export GO111MODULE=auto
+# export GO111MODULE=auto
 
 alias ne='nvim'
 alias syncdots='cd ~/dotfiles && sh sync_dotfiles.sh'
@@ -202,4 +143,5 @@ ff() {
 }
 
 # Watcher (Pinterest)
-alias rwatcher='cd ~/code && CODE_PATH=$PWD; TRUNC_PATH=${PWD#"$HOME"/}/; python ~/code/pinboard/bin/watcher.py -s $CODE_PATH jcardenas@devrestricted-jcardenas:$TRUNC_PATH --exclude=/go-cache --exclude=/bin --exclude=/pkg --exclude=/go --exclude=/build --exclude=/manaslib --exclude \*flymake\* --exclude=dev_files --exclude=/tmp --exclude ~/code/pinboard/.#\* --exclude-git --exclude .#\*'
+# alias rwatcher='cd ~/code && CODE_PATH=$PWD; TRUNC_PATH=${PWD#"$HOME"/}/; python ~/code/pinboard/bin/watcher.py -s $CODE_PATH jcardenas@devrestricted-jcardenas:$TRUNC_PATH --exclude=/go-cache --exclude=/bin --exclude=/pkg --exclude=/go --exclude=/build --exclude=/manaslib --exclude \*flymake\* --exclude=dev_files --exclude=/tmp --exclude ~/code/pinboard/.#\* --exclude-git --exclude .#\*'
+eval "$(starship init zsh)"

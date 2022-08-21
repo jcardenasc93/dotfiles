@@ -97,7 +97,7 @@ return packer.startup(function(use)
   use "simrat39/symbols-outline.nvim" -- Tags navigation
 
   -- CSV Files
-  use "mechatroner/rainbow_csv"
+  --use "mechatroner/rainbow_csv"
 
   -- Flutter
   -- use "dart-lang/dart-vim-plugin"

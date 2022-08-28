@@ -23,7 +23,29 @@ nix-env -iA \
   nixpkgs.lazygit \
   nixpkgs.lsd \
   nixpkgs.flameshot \
-  nixpkgs.copyq # Only for MacOS
+  nixpkgs.copyq \ # Only for MacOS
+  nixpkgs.coreutils \
+  nixpkgs.openssl \
+  nixpkgs.readline \
+  nixpkgs.sqlite \
+  nixpkgs.xz \
+  nixpkgs.zlib \
+  nixpkgs.tcl \
+  nixpkgs.curl \
+  nixpkgs.libossp_uuid \ # Only for MacOS
+  nixpkgs.libuuid \ # Only for linux
+
+  # Linux only
+  nixpkgs.gnumake \
+  nixpkgs.gcc \
+  nixpkgs.bzip2 \
+  nixpkgs.libffi
+
+
+
+# Dev dependencies
+## MacOS Only
+xcode-select --install
 
 # stow packages
 stow git
@@ -41,4 +63,28 @@ sudo chsh -s $(which zsh)
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
 # Install neovim pulgins
-ne --headless +PackerSync +qall
+nvim --headless +PackerSync +qall
+# Install neovim LSPs
+gopls, sumneko_lua, html, emmet_ls, pyright
+nvim --headless +LspInstall gopls +qall
+nvim --headless +LspInstall sumneko_lua +qall
+nvim --headless +LspInstall emmuet_ls +qall
+nvim --headless +LspInstall pyright +qall
+
+# Setup asdf plugins and install packages
+## Node.js
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs 16
+asdf global nodejs 16 # Set latest 16.x.x version of node as default
+
+## Python
+asdf plugin-add python
+asdf install python 3.8.8
+asdf global python 3.8.8 # Set python 3.8 as default
+
+## Golang
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+
+## Postgers
+asdf plugin-add postgres
+# Check https://github.com/smashedtoatoms/asdf-postgres for postgres setup per project

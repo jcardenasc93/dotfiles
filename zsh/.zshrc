@@ -76,8 +76,6 @@ source $HOME/.zsh_plugins.sh
 # source $ZSH/oh-my-zsh.sh
 # source $HOME/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# Source nix in zsh (Only for Linux)
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
 
 # User configuration
 
@@ -119,7 +117,7 @@ export PATH="/usr/local/opt/bzip2/bin:$PATH"
 #export CPPFLAGS="-I/usr/local/opt/sqlite/include"
 
 # Bat theme
-alias cat=bat
+alias cat="bat"
 export BAT_THEME="gruvbox-dark"
 
 
@@ -149,3 +147,6 @@ ff() {
 # Watcher (Pinterest)
 # alias rwatcher='cd ~/code && CODE_PATH=$PWD; TRUNC_PATH=${PWD#"$HOME"/}/; python ~/code/pinboard/bin/watcher.py -s $CODE_PATH jcardenas@devrestricted-jcardenas:$TRUNC_PATH --exclude=/go-cache --exclude=/bin --exclude=/pkg --exclude=/go --exclude=/build --exclude=/manaslib --exclude \*flymake\* --exclude=dev_files --exclude=/tmp --exclude ~/code/pinboard/.#\* --exclude-git --exclude .#\*'
 eval "$(starship init zsh)"
+
+# Source nix in zsh (Only for Linux)
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi

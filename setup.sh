@@ -21,7 +21,9 @@ nix-env -iA \
   nixpkgs.direnv \
   nixpkgs.cheat \
   nixpkgs.lazygit \
-  nixpkgs.lsd
+  nixpkgs.lsd \
+  nixpkgs.flameshot \
+  nixpkgs.copyq # Only for MacOS
 
 # stow packages
 stow git
@@ -38,3 +40,5 @@ sudo chsh -s $(which zsh)
 # Install plugins for zsh
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
+# Install neovim pulgins
+ne --headless +PackerSync +qall

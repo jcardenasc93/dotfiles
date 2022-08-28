@@ -72,8 +72,12 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git copypath dirhistory history zsh-syntax-highlighting zsh-autosuggestions asdf)
 
-source $ZSH/oh-my-zsh.sh
-source $HOME/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $HOME/.zsh_plugins.sh
+# source $ZSH/oh-my-zsh.sh
+# source $HOME/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+# Source nix in zsh (Only for Linux)
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
 
 # User configuration
 
@@ -100,7 +104,7 @@ source $HOME/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="lsd -a"
+alias ls="lsd -a1l"
 
 export PATH="/usr/local/opt/bzip2/bin:$PATH"
 

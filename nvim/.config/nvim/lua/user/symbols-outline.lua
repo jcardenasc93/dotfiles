@@ -1,5 +1,5 @@
-vim.g.symbols_outline = {
+require("symbols-outline").setup({
   auto_preview = false,
   highlight_hovered_item = false,
-  auto_close = true,
-}
+  auto_close = false
+})

@@ -4,6 +4,9 @@ sh <(curl -L https://nixos.org/nix/install) --no-daemon # Linux
 
 # sh <(curl -L https://nixos.org/nix/install) # MacOS
 
+# source nix
+. ~/.nix-profile/etc/profile.d/nix.sh
+
 # Install packages
 nix-env -iA \
   nixpkgs.zsh \ # Only for linux

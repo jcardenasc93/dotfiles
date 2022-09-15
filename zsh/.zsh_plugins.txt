@@ -6,7 +6,6 @@ mwilc0x/ohmyzsh path:plugins/copydir
 ohmyzsh/ohmyzsh path:plugins/copypath
 ohmyzsh/ohmyzsh path:plugins/dirhistory
 ohmyzsh/ohmyzsh path:plugins/history
-ohmyzsh/ohmyzsh path:plugins/asdf
 ohmyzsh/ohmyzsh path:plugins/jsontools
 
 zsh-users/zsh-syntax-highlighting

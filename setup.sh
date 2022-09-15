@@ -94,6 +94,8 @@ asdf global python 3.8.8 # Set python 3.8 as default
 
 ## Golang
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf install golang latest
+asdf global golang latest
 
 ## Postgers
 asdf plugin-add postgres

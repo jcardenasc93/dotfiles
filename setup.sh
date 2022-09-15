@@ -49,6 +49,9 @@ nix-env -iA \
 brew install --cask kitty
 brew tap homebrew/cask-fonts && brew install --cask font-go-mono-nerd-font
 
+# Antidote to handle zsh plugins
+git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
+
 
 
 # Dev dependencies
@@ -66,6 +69,9 @@ stow tmux
 
 # Set zsh as default shell (Only for Linux)
 sudo chsh -s $(which zsh)
+# Install zsh plugins
+# generate ~/.zsh_plugins.zsh
+antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
 
 # Install neovim pulgins
 nvim --headless +PackerSync +qall

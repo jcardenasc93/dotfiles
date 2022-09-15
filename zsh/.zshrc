@@ -70,9 +70,15 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git copypath dirhistory history zsh-syntax-highlighting zsh-autosuggestions asdf)
+# plugins=(git copypath dirhistory history zsh-syntax-highlighting zsh-autosuggestions asdf)
 
-source $HOME/.zsh_plugins.sh
+# source antidote
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
+
+#source $HOME/.zsh_plugins.sh
 # source $ZSH/oh-my-zsh.sh
 # source $HOME/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 

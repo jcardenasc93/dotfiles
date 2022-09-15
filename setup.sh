@@ -35,6 +35,8 @@ nix-env -iA \
   nixpkgs.curl \
   nixpkgs.libossp_uuid \ # Only for MacOS
   nixpkgs.libuuid \ # Only for linux
+  nixpkgs.gawk \
+  nix-env -iA nixpkgs.gnupg
 
 
   # Linux only

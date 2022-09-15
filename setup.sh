@@ -1,23 +1,23 @@
 # Nix install
-sh <(curl -L https://nixos.org/nix/install) --no-daemon # Linux
+curl -L https://nixos.org/nix/install | sh 
 #NOTE: For linux check if after installation source nix to shell is required! (look .profile file)
-
-# sh <(curl -L https://nixos.org/nix/install) # MacOS
 
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
 
+# MacOS only
+source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
+
 # Install packages
 nix-env -iA \
   nixpkgs.zsh \ # Only for linux
-  nixpkgs.antibody \
   nixpkgs.ripgrep \
   nixpkgs.fzf \
   nixpkgs.tmux \
   nixpkgs.bat \
   nixpkgs.stow \
   nixpkgs.asdf-vm \
-  nixpkgs.kitty \
   nixpkgs.kitty-themes \
   nixpkgs.neovim \
   nixpkgs.starship \
@@ -25,8 +25,6 @@ nix-env -iA \
   nixpkgs.cheat \
   nixpkgs.lazygit \
   nixpkgs.lsd \
-  nixpkgs.flameshot \
-  nixpkgs.copyq \ # Only for MacOS
   nixpkgs.coreutils \
   nixpkgs.openssl \
   nixpkgs.readline \
@@ -38,11 +36,18 @@ nix-env -iA \
   nixpkgs.libossp_uuid \ # Only for MacOS
   nixpkgs.libuuid \ # Only for linux
 
+
   # Linux only
   nixpkgs.gnumake \
   nixpkgs.gcc \
   nixpkgs.bzip2 \
   nixpkgs.libffi
+
+# brew installation
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install --cask kitty
+brew tap homebrew/cask-fonts && brew install --cask font-go-mono-nerd-font
 
 
 
@@ -61,9 +66,6 @@ stow tmux
 
 # Set zsh as default shell (Only for Linux)
 sudo chsh -s $(which zsh)
-
-# Install plugins for zsh
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 
 # Install neovim pulgins
 nvim --headless +PackerSync +qall

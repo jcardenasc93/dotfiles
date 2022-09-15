@@ -50,7 +50,6 @@ nix-env -iA \
 brew install --cask kitty
 brew tap homebrew/cask-fonts && brew install --cask font-go-mono-nerd-font
 brew install asdf
-echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
 # Antidote to handle zsh plugins
 git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
@@ -75,6 +74,9 @@ sudo chsh -s $(which zsh)
 # Install zsh plugins
 # generate ~/.zsh_plugins.zsh
 antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
+
+# Setup asdf
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
 # Install neovim pulgins
 nvim --headless +PackerSync +qall

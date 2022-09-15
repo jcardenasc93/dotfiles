@@ -17,7 +17,6 @@ nix-env -iA \
   nixpkgs.tmux \
   nixpkgs.bat \
   nixpkgs.stow \
-  nixpkgs.asdf-vm \
   nixpkgs.kitty-themes \
   nixpkgs.neovim \
   nixpkgs.starship \
@@ -50,6 +49,8 @@ nix-env -iA \
 
 brew install --cask kitty
 brew tap homebrew/cask-fonts && brew install --cask font-go-mono-nerd-font
+brew install asdf
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
 # Antidote to handle zsh plugins
 git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote

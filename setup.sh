@@ -81,8 +81,8 @@ nvim --headless +PackerSync +qall
 # Setup asdf plugins and install packages
 ## Node.js
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf install nodejs 16
-asdf global nodejs 16 # Set latest 16.x.x version of node as default
+asdf install nodejs 16.17.0
+asdf global nodejs 16.17.0 # Set latest 16.x.x version of node as default
 
 ## Python
 asdf plugin-add python

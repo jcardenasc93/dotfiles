@@ -72,6 +72,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git copypath dirhistory history zsh-syntax-highlighting zsh-autosuggestions asdf)
 
+autoload -Uz compinit
+compinit -i
+
 # source antidote
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 

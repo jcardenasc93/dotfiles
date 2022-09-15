@@ -75,12 +75,6 @@ antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
 
 # Install neovim pulgins
 nvim --headless +PackerSync +qall
-# Install neovim LSPs
-gopls, sumneko_lua, html, emmet_ls, pyright
-nvim --headless +LspInstall gopls +qall
-nvim --headless +LspInstall sumneko_lua +qall
-nvim --headless +LspInstall emmuet_ls +qall
-nvim --headless +LspInstall pyright +qall
 
 # Setup asdf plugins and install packages
 ## Node.js
@@ -99,3 +93,10 @@ asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 ## Postgers
 asdf plugin-add postgres
 # Check https://github.com/smashedtoatoms/asdf-postgres for postgres setup per project
+
+# Install neovim LSPs
+# gopls, sumneko_lua, html, emmet_ls, pyright
+nvim --headless +LspInstall gopls +qall
+nvim --headless +LspInstall sumneko_lua +qall
+nvim --headless +LspInstall emmuet_ls +qall
+nvim --headless +LspInstall pyright +qall

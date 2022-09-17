@@ -45,6 +45,7 @@ nix-env -iA \
   nixpkgs.libffi
 
 # brew installation
+sudo dnf groupinstall "Development Tools" # Linux only
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install --cask kitty

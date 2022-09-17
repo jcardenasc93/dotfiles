@@ -51,6 +51,7 @@ sudo dnf groupinstall "Development Tools" # Linux only
 brew install --cask kitty
 brew tap homebrew/cask-fonts && brew install --cask font-go-mono-nerd-font
 brew install asdf
+brew install --cask brave-browser
 
 # Antidote to handle zsh plugins
 git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote

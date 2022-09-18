@@ -47,6 +47,9 @@ nix-env -iA \
 # brew installation
 sudo dnf groupinstall "Development Tools" # Linux only
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Linux only (both)
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bash_profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 brew install --cask kitty
 brew tap homebrew/cask-fonts && brew install --cask font-go-mono-nerd-font

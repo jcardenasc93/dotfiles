@@ -1,5 +1,6 @@
 # Nix install
-curl -L https://nixos.org/nix/install | sh 
+# curl -L https://nixos.org/nix/install | sh MacOS 
+curl -L https://nixos.org/nix/install --no-daemon | sh
 #NOTE: For linux check if after installation source nix to shell is required! (look .profile file)
 
 # source nix

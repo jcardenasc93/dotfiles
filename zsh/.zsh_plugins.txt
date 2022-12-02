@@ -7,6 +7,7 @@ ohmyzsh/ohmyzsh path:plugins/copypath
 ohmyzsh/ohmyzsh path:plugins/dirhistory
 ohmyzsh/ohmyzsh path:plugins/history
 ohmyzsh/ohmyzsh path:plugins/jsontools
+# ohmyzsh/ohmyzsh path:plugins/asdf
 
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions

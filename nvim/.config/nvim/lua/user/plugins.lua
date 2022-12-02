@@ -57,6 +57,7 @@ return packer.startup(function(use)
   --use "sheerun/vim-polyglot"
   -- Color scheme
   use "morhetz/gruvbox"
+  use "shaunsingh/nord.nvim"
   use "NvChad/nvim-colorizer.lua"
 
   --Python
@@ -110,7 +111,19 @@ return packer.startup(function(use)
   -- Go
   -- use "fatih/vim-go"
 
+  -- UndoTree
+  use "https://github.com/mbbill/undotree"
+
   -- Telescope
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      { "nvim-telescope/telescope-live-grep-args.nvim" },
+    },
+    config = function()
+      require("telescope").load_extension("live_grep_args")
+    end
+  }
   use "nvim-telescope/telescope.nvim"
   use "tom-anders/telescope-vim-bookmarks.nvim"
   use "lalitmee/browse.nvim"

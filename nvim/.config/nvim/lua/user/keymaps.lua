@@ -26,16 +26,23 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Resize windows
 keymap("n", "<leader>k", ":resize -5<CR>", opts)
 keymap("n", "<leader>j", ":resize +5<CR>", opts)
-keymap("n", "<leader>h", ":vertical resize -10<CR>", opts)
-keymap("n", "<leader>l", ":vertical resize +10<CR>", opts)
+keymap("n", "<leader>hh", ":vertical resize -10<CR>", opts)
+keymap("n", "<leader>ll", ":vertical resize +10<CR>", opts)
 
 
 -- General
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>s", ":w<CR>", opts)
 keymap("n", "<leader>n", ":noh<CR>", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "n", "nzz", opts)
 keymap("n", "<leader>yp", ":let @+ = expand(\"%\")<CR>", opts)
 keymap("n", "<leader>yl", ":let @+ = expand(\"%\") . ':' . line(\".\")<CR>", opts)
+keymap("n", "<leader>y", "\"+y", opts)
+keymap("v", "<leader>y", "\"+y", opts)
+keymap("n", "<leader>p", "\"+p", opts)
+keymap("v", "<leader>p", "\"+p", opts)
 
 -- I hate typing these
 keymap("n", "<leader>h", "^", opts)
@@ -53,6 +60,9 @@ keymap("o", "<leader>l", "$", opts)
 --Nvim Tree
 keymap("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
 
+-- UndoTree
+keymap("n", "<leader>ut", ":UndotreeToggle<CR>", opts)
+
 -- Comment
 require('Comment').setup()
 
@@ -60,7 +70,8 @@ require('Comment').setup()
 keymap("n", "<leader>ff",
   "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
   {})
-keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
+-- keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
+keymap("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
 keymap('n', '<leader>fw', '<cmd>lua require(\'telescope.builtin\').grep_string({search = vim.fn.expand("<cword>")})<CR>'
   , {})
 keymap('n', '<leader>fb', ':Telescope file_browser<CR>', {})
@@ -110,6 +121,21 @@ keymap("n", "<leader>rc", "<Cmd>lua require'dap'.run_to_cursor()<CR>", {})
 keymap("n", "<leader>dc", "<Cmd>lua require'dap'.repl.open()<CR>", {})
 keymap("n", "dD", "<Cmd>lua require('dapui').open()<CR>", {})
 keymap("n", "dC", "<Cmd>lua require('dapui').close()<CR>", {})
+-- Only for go files
+vim.api.nvim_create_autocmd(
+  "FileType",
+  {
+    pattern = "go",
+    callback = function()
+      vim.api.nvim_set_keymap(
+        "n",
+        "dt",
+        ":lua require('dap-go').debug_test()<CR>",
+        { noremap = true, silent = true }
+      )
+    end,
+  }
+)
 
 
 ----------------------- Visual mode -------------

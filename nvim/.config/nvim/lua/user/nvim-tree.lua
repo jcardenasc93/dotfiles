@@ -95,13 +95,13 @@ nvim_tree.setup {
     },
   },
   --diagnostics = {
-    --enable = true,
-    --icons = {
-    --  hint = icons.diagnostics.Hint,
-    --  info = icons.diagnostics.Information,
-    --  warning = icons.diagnostics.Warning,
-    --  error = icons.diagnostics.Error,
-    --},
+  --enable = true,
+  --icons = {
+  --  hint = icons.diagnostics.Hint,
+  --  info = icons.diagnostics.Information,
+  --  warning = icons.diagnostics.Warning,
+  --  error = icons.diagnostics.Error,
+  --},
   --},
   update_focused_file = {
     enable = true,
@@ -123,7 +123,6 @@ nvim_tree.setup {
   },
   view = {
     width = 30,
-    height = 30,
     hide_root_folder = false,
     side = "left",
     -- auto_resize = true,

@@ -13,7 +13,7 @@ require('telescope').setup {
   },
   extensions = {
     file_browser = {
-      theme = "gruvbox",
+      theme = "nord",
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = true,
       -- mappings = {
@@ -25,13 +25,17 @@ require('telescope').setup {
       --   },
       -- },
     },
+    live_grep_args = {
+      auto_quoting = false,
+      theme = "nord"
+    }
   },
   pickers = {
-    live_grep = {
-      additional_args = function()
-        return { "--hidden" }
-      end
-    },
+    -- live_grep = {
+    --   additional_args = function()
+    --     return { "--hidden" }
+    --   end
+    -- },
     find_files = {
       additional_args = function()
         return { "--hidden" }

@@ -1,7 +1,7 @@
 local options = {
   number = true,
   numberwidth = 1,
-  clipboard = "unnamedplus",
+  clipboard = "",
   re = 2,
   showcmd = true,
   fileencoding = "UTF-8",
@@ -30,16 +30,18 @@ local options = {
   foldlevel = 1,
   termguicolors = true,
   updatetime = 0,
-  timeoutlen = 200
+  timeoutlen = 200,
+  mouse = "n",
 }
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd([[let g:gruvbox_contrast_dark = "dark"]])
-vim.cmd([[let g:gruvbox_transparent_bg=1]])
-vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[let g:gruvbox_contrast_dark = "dark"]])
+-- vim.cmd([[let g:gruvbox_transparent_bg=1]])
+-- vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme nord]])
 vim.cmd([[highlight Normal ctermbg=NONE guibg=NONE]])
 
 -- Floatterm settings

@@ -2,11 +2,11 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
+format = " $all"
 add_newline = true
 
 # git
 [git_branch]
-ignore_branches = []
 style = "bold #25eacd"
 
 # Go

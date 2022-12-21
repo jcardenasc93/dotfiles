@@ -68,14 +68,16 @@ require('Comment').setup()
 
 -- Telescope
 keymap("n", "<leader>ff",
-  "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
-  {})
+    "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>"
+    ,
+    {})
 -- keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
 keymap("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
 keymap('n', '<leader>fw', '<cmd>lua require(\'telescope.builtin\').grep_string({search = vim.fn.expand("<cword>")})<CR>'
-  , {})
+    , {})
 keymap('n', '<leader>fb', ':Telescope file_browser<CR>', {})
 keymap('n', '<leader>bb', ':Telescope buffers<CR>', {})
+keymap('n', '<leader>gb', ':Telescope git_branches<CR>', {})
 
 -- Spectre (Replace text in multiples files)
 keymap("n", "<leader>fr", "<cmd>lua require('spectre').open()<CR>", opts)
@@ -123,18 +125,18 @@ keymap("n", "dD", "<Cmd>lua require('dapui').open()<CR>", {})
 keymap("n", "dC", "<Cmd>lua require('dapui').close()<CR>", {})
 -- Only for go files
 vim.api.nvim_create_autocmd(
-  "FileType",
-  {
-    pattern = "go",
-    callback = function()
-      vim.api.nvim_set_keymap(
-        "n",
-        "dt",
-        ":lua require('dap-go').debug_test()<CR>",
-        { noremap = true, silent = true }
-      )
-    end,
-  }
+    "FileType",
+    {
+        pattern = "go",
+        callback = function()
+            vim.api.nvim_set_keymap(
+                "n",
+                "dt",
+                ":lua require('dap-go').debug_test()<CR>",
+                { noremap = true, silent = true }
+            )
+        end,
+    }
 )
 
 

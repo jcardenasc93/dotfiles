@@ -9,8 +9,8 @@ ohmyzsh/ohmyzsh path:plugins/history
 ohmyzsh/ohmyzsh path:plugins/jsontools
 # ohmyzsh/ohmyzsh path:plugins/asdf
 
-zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 
 jeffreytse/zsh-vi-mode
+zsh-users/zsh-syntax-highlighting

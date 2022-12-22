@@ -41,7 +41,7 @@ alias la="lsd -a1l"
 
 # Bat theme
 alias cat="bat"
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="Nord"
 
 
 # Go setup
@@ -69,3 +69,4 @@ ff() {
 }
 
 eval "$(starship init zsh)"
+antidote load

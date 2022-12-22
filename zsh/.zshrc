@@ -69,4 +69,4 @@ ff() {
 }
 
 eval "$(starship init zsh)"
-antidote load
+export EDITOR=nvim

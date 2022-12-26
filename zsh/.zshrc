@@ -50,6 +50,8 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
+alias go-cover-html='go test -coverprofile=coverage.out && go tool cover -html=coverage.out'
+
 alias ne='nvim'
 alias syncdots='cd ~/dotfiles && sh sync_dotfiles.sh'
 alias htop='bpytop'
@@ -70,3 +72,6 @@ ff() {
 
 eval "$(starship init zsh)"
 export EDITOR=nvim
+
+# Elixir
+export PATH=$PATH:/usr/bin/elixir

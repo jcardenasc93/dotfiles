@@ -13,7 +13,7 @@ require('treesitter-context').setup({
 })
 
 configs.setup({
-    ensure_installed = { "go", "python", "typescript", "html", "css", "javascript", "bash" }, -- one of "all" or a list of languages
+    ensure_installed = { "go", "python", "typescript", "html", "css", "javascript", "bash", "elixir", "heex", "eex" }, -- one of "all" or a list of languages
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = {
         enable = true, -- false will disable the whole extension

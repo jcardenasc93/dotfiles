@@ -1,4 +1,5 @@
 require("nvim-lsp-installer").setup {}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local on_attach = function(client)
     require "lsp_signature".on_attach(client)
@@ -54,4 +55,11 @@ require 'lspconfig'.sumneko_lua.setup {
 -- JS
 require 'lspconfig'.tsserver.setup {
     on_attach = on_attach,
+}
+
+-- Elixir,
+require 'lspconfig'.elixirls.setup {
+    cmd = { "elixir-ls" },
+    on_attach = on_attach,
+    capabilities = capabilities,
 }

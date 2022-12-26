@@ -58,3 +58,5 @@ vim.cmd([[set foldmethod=expr]])
 vim.cmd([[set foldexpr=nvim_treesitter#foldexpr()]])
 
 vim.cmd([[let g:go_def_mapping_enabled=0]])
+
+vim.opt.updatetime = 50

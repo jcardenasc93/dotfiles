@@ -58,7 +58,7 @@ keymap("o", "<leader>l", "$", opts)
 --keymap("n", "<leader>qu", "ciw", opts)
 
 --Nvim Tree
-keymap("n", "<leader>b", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>b", ":Oil --float %:h<CR>", opts)
 
 -- UndoTree
 keymap("n", "<leader>ut", ":UndotreeToggle<CR>", opts)

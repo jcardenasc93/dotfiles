@@ -169,11 +169,11 @@ return packer.startup(function(use)
     use "nvim-telescope/telescope-dap.nvim"
     use "HiPhish/debugpy.nvim"
 
+    -- SQL client
+    use 'nanotee/sqls.nvim'
+
     -- Oil (file manager as text editor)
-    use {
-      'stevearc/oil.nvim',
-      config = function() require('oil').setup() end
-    }
+    use "stevearc/oil.nvim"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

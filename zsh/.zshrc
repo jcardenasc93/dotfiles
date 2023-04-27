@@ -1,5 +1,5 @@
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh 
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit 

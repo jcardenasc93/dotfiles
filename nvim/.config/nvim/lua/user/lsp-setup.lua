@@ -35,7 +35,7 @@ require 'lspconfig'.gopls.setup {
 }
 
 -- Lua
-require 'lspconfig'.sumneko_lua.setup {
+require 'lspconfig'.lua_ls.setup {
     on_attach = on_attach,
     settings = {
         Lua = {
@@ -62,4 +62,11 @@ require 'lspconfig'.elixirls.setup {
     cmd = { "elixir-ls" },
     on_attach = on_attach,
     capabilities = capabilities,
+}
+
+-- SQL
+require('lspconfig').sqlls.setup{
+    on_attach = function(client, bufnr)
+        require('sqls').on_attach(client, bufnr)
+    end
 }

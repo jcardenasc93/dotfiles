@@ -21,11 +21,28 @@ local on_attach = function(client)
     vim.keymap.set('n', '<space>i', vim.lsp.buf.formatting, { buffer = 0 })
 end
 
-
 ------------ Connected servers --------------------------
 -- Python
-require 'lspconfig'.pyright.setup {
-    on_attach = on_attach
+require('lspconfig').pylsp.setup{
+    settings = {
+        pylsp = {
+            plugins = {
+                ruff = {
+                    enabled = true,
+                    extendSelect = { "I" },
+                }
+            }
+        }
+    }
+}
+require('lspconfig').ruff_lsp.setup {
+  on_attach = on_attach,
+  init_options = {
+    settings = {
+      -- Any extra CLI arguments for `ruff` go here.
+      args = {},
+    }
+  }
 }
 
 -- Golang

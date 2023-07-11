@@ -1,7 +1,7 @@
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh 
 # . $HOME/.asdf/asdf.sh
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+# fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit 
 compinit 
 # Lines configured by zsh-newuser-install 
@@ -43,6 +43,13 @@ alias la="lsd -a1l"
 alias cat="bat"
 export BAT_THEME="Nord"
 
+# Brew Path
+export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
+export PATH="$PATH:$BREW_HOME"
+
+# Python ruff-lsp
+export RUFF_LSP_HOME="/home/jcardenasc93/.local/bin"
+export PATH="$PATH:$RUFF_LSP_HOME"
 
 # Go setup
 export PATH=$PATH:/usr/local/go/bin

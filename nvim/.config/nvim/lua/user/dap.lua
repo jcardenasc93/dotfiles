@@ -12,6 +12,24 @@ dap.listeners.before.exited["dapui_config"] = function()
   dapui.close()
 end
 
+local function get_arguments()
+  local co = coroutine.running()
+  if co then
+    return coroutine.create(function()
+      local args = {}
+      vim.ui.input({ prompt = "Args: " }, function(input)
+        args = vim.split(input or "", " ")
+      end)
+      coroutine.resume(co, args)
+    end)
+  else
+    local args = {}
+    vim.ui.input({ prompt = "Args: " }, function(input)
+      args = vim.split(input or "", " ")
+    end)
+    return args
+  end
+end
 -- List of languages
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = "go",
@@ -54,6 +72,13 @@ dap.configurations.go = {
     showLog = false,
     program = "${file}",
     dlvToolPath = vim.fn.exepath('dlv') -- Adjust to where delve is installed
+  },
+  {
+    type = "go",
+    name = "Debug (Arguments)",
+    request = "launch",
+    program = "${file}",
+    args = get_arguments,
   },
   {
     type = "go",

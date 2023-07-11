@@ -45,13 +45,14 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
     use "easymotion/vim-easymotion"
-    use {
-        'kyazdani42/nvim-tree.lua',
-        requires = {
-            'kyazdani42/nvim-web-devicons', -- optional, for file icons
-        },
-        --tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
+    use "kyazdani42/nvim-web-devicons"
+    -- use {
+    --     'kyazdani42/nvim-tree.lua',
+    --     requires = {
+    --         'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    --     },
+    --     --tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    -- }
     use "ryanoasis/vim-devicons" -- file icons
     use "christoomey/vim-tmux-navigator"
     --use "sheerun/vim-polyglot"

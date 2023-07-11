@@ -91,7 +91,7 @@ keymap('n', '<leader>an', ':lua require("harpoon.ui").nav_file(3)<CR>', {})
 keymap('n', '<leader>as', ':lua require("harpoon.ui").nav_file(4)<CR>', {})
 
 -- Lazygit
-keymap("n", "<leader>gi", ":FloatermNew lazygit<CR>", opts)
+keymap("n", "<leader>lg", ":FloatermNew lazygit<CR>", opts)
 
 -- Maximizer
 keymap("n", "<leader>m", ":MaximizerToggle<CR>", opts)
@@ -131,7 +131,7 @@ vim.api.nvim_create_autocmd(
         callback = function()
             vim.api.nvim_set_keymap(
                 "n",
-                "dt",
+                "<leader>dt",
                 ":lua require('dap-go').debug_test()<CR>",
                 { noremap = true, silent = true }
             )

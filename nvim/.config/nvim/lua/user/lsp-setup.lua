@@ -23,7 +23,7 @@ end
 
 ------------ Connected servers --------------------------
 -- Python
-require('lspconfig').pylsp.setup{
+require('lspconfig').pylsp.setup {
     settings = {
         pylsp = {
             plugins = {
@@ -36,13 +36,13 @@ require('lspconfig').pylsp.setup{
     }
 }
 require('lspconfig').ruff_lsp.setup {
-  on_attach = on_attach,
-  init_options = {
-    settings = {
-      -- Any extra CLI arguments for `ruff` go here.
-      args = {},
+    on_attach = on_attach,
+    init_options = {
+        settings = {
+            -- Any extra CLI arguments for `ruff` go here.
+            args = {},
+        }
     }
-  }
 }
 
 -- Golang
@@ -82,7 +82,7 @@ require 'lspconfig'.elixirls.setup {
 }
 
 -- SQL
-require('lspconfig').sqlls.setup{
+require('lspconfig').sqlls.setup {
     on_attach = function(client, bufnr)
         require('sqls').on_attach(client, bufnr)
     end

@@ -74,7 +74,7 @@ keymap("n", "<leader>ff",
 -- keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
 keymap("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", {})
 keymap('n', '<leader>fw', '<cmd>lua require(\'telescope.builtin\').grep_string({search = vim.fn.expand("<cword>")})<CR>'
-    , {})
+, {})
 keymap('n', '<leader>fb', ':Telescope file_browser<CR>', {})
 keymap('n', '<leader>bb', ':Telescope buffers<CR>', {})
 keymap('n', '<leader>gb', ':Telescope git_branches<CR>', {})
@@ -138,6 +138,12 @@ vim.api.nvim_create_autocmd(
         end,
     }
 )
+
+-- Goto-Prev
+keymap("n", "<leader>gd", "<Cmd>lua require'goto-preview'.goto_preview_definition()<CR>", {})
+keymap("n", "<leader>td", "<Cmd>lua require'goto-preview'.goto_preview_type_definition()<CR>", {})
+keymap("n", "<leader>gi", "<Cmd>lua require'goto-preview'.goto_preview_implementation()<CR>", {})
+keymap("n", "<leader>gr", "<Cmd>lua require'goto-preview'.goto_preview_references()<CR>", {})
 
 
 ----------------------- Visual mode -------------

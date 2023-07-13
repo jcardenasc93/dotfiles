@@ -17,7 +17,8 @@ format = "[$symbol](fg:#79D4FD)[$version](bold #79D4FD) "
 # Python
 [python]
 symbol = " "
-format = "[$symbol](fg:#8BC34A)[$version](bold #8BC34A) "
+format = "[$symbol](fg:#8BC34A)[($version )]($style)[($virtualenv)](bold #ede20e)"
+style = "bold #8BC34A"
 
 # Lua
 [lua]

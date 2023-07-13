@@ -39,11 +39,10 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-
     -- My plugins here
     use "wbthomason/packer.nvim" -- Have packer manage itself
-    use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-    use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+    use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
+    use "windwp/nvim-autopairs"  -- Autopairs, integrates with both cmp and treesitter
     use "easymotion/vim-easymotion"
     use "kyazdani42/nvim-web-devicons"
     -- use {
@@ -83,7 +82,7 @@ return packer.startup(function(use)
 
     -- Git
     use "tpope/vim-fugitive" -- Git integration
-    use "tpope/vim-rhubarb" -- Git integration
+    use "tpope/vim-rhubarb"  -- Git integration
 
     use "christoomey/vim-tmux-runner"
     use "tmux-plugins/vim-tmux-focus-events"
@@ -139,10 +138,10 @@ return packer.startup(function(use)
     -- cmp plugins
     use { "hrsh7th/nvim-cmp" }
     use "hrsh7th/cmp-nvim-lsp"
-    use "hrsh7th/cmp-buffer" -- buffer completions
-    use "hrsh7th/cmp-path" -- path completions
+    use "hrsh7th/cmp-buffer"  -- buffer completions
+    use "hrsh7th/cmp-path"    -- path completions
     use "hrsh7th/cmp-cmdline" -- cmdline completions
-    use "L3MON4D3/LuaSnip" -- Snippets
+    use "L3MON4D3/LuaSnip"    -- Snippets
 
     -- LSP
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
@@ -181,4 +180,12 @@ return packer.startup(function(use)
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
+
+    -- Goto preview
+    use {
+        'rmagatti/goto-preview',
+        config = function()
+            require('goto-preview').setup {}
+        end
+    }
 end)

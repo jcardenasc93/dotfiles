@@ -28,7 +28,6 @@ antidote load
 # User configuration
 
 
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -42,6 +41,10 @@ alias la="lsd -a1l"
 # Bat theme
 alias cat="bat"
 export BAT_THEME="Nord"
+
+# ssh agent load
+alias ssh-l="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/yubi_jc_ed25519"
+ssh-l
 
 # Brew Path
 export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"

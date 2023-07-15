@@ -44,6 +44,10 @@ keymap("v", "<leader>y", "\"+y", opts)
 keymap("n", "<leader>p", "\"+p", opts)
 keymap("v", "<leader>p", "\"+p", opts)
 
+-- Vertical motino
+keymap("n", "j", "jzz", opts)
+keymap("n", "k", "kzz", opts)
+
 -- I hate typing these
 keymap("n", "<leader>h", "^", opts)
 keymap("n", "<leader>l", "$", opts)

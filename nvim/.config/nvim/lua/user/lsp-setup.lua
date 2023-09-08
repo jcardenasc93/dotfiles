@@ -24,6 +24,7 @@ end
 ------------ Connected servers --------------------------
 -- Python
 require('lspconfig').pylsp.setup {
+    on_attach = on_attach,
     settings = {
         pylsp = {
             plugins = {
@@ -35,15 +36,19 @@ require('lspconfig').pylsp.setup {
         }
     }
 }
-require('lspconfig').ruff_lsp.setup {
-    on_attach = on_attach,
-    init_options = {
-        settings = {
-            -- Any extra CLI arguments for `ruff` go here.
-            args = {},
-        }
-    }
-}
+
+-- local llspconfig = require('lspconfig')
+--
+-- require('lspconfig').ruff_lsp.setup {
+--     on_attach = on_attach,
+--     root_dir = llspconfig.util.root_pattern('.git'),
+--     init_options = {
+--         settings = {
+--             -- Any extra CLI arguments for `ruff` go here.
+--             args = {},
+--         }
+--     }
+-- }
 
 -- Golang
 require 'lspconfig'.gopls.setup {

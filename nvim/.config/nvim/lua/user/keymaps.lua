@@ -29,7 +29,6 @@ keymap("n", "<leader>j", ":resize +5<CR>", opts)
 keymap("n", "<leader>hh", ":vertical resize -10<CR>", opts)
 keymap("n", "<leader>ll", ":vertical resize +10<CR>", opts)
 
-
 -- General
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>s", ":w<CR>", opts)
@@ -148,6 +147,11 @@ keymap("n", "<leader>gd", "<Cmd>lua require'goto-preview'.goto_preview_definitio
 keymap("n", "<leader>td", "<Cmd>lua require'goto-preview'.goto_preview_type_definition()<CR>", {})
 keymap("n", "<leader>gi", "<Cmd>lua require'goto-preview'.goto_preview_implementation()<CR>", {})
 keymap("n", "<leader>gr", "<Cmd>lua require'goto-preview'.goto_preview_references()<CR>", {})
+
+-- DB
+keymap("n", "<leader>db", "<Cmd>DBUIToggle<CR>", {})
+keymap("n", "<leader>dbc", "<Cmd>DBUIClose<CR>", {})
+keymap("n", "<leader>dbf", "<Cmd>DBUIFindBuffer<CR>", {})
 
 
 ----------------------- Visual mode -------------

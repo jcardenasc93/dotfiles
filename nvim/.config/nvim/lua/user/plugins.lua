@@ -129,7 +129,6 @@ return packer.startup(function(use)
             require("telescope").load_extension("live_grep_args")
         end
     }
-    use "nvim-telescope/telescope.nvim"
     use "tom-anders/telescope-vim-bookmarks.nvim"
     use "lalitmee/browse.nvim"
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -188,4 +187,9 @@ return packer.startup(function(use)
             require('goto-preview').setup {}
         end
     }
+
+    -- DB Manager
+    use 'tpope/vim-dadbod'
+    use 'kristijanhusak/vim-dadbod-ui'
+    use 'kristijanhusak/vim-dadbod-completion'
 end)

@@ -119,6 +119,9 @@ require('lazy').setup({
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
 
+      -- Buffer
+      'hrsh7th/cmp-buffer',
+
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
     },
@@ -538,6 +541,7 @@ require('mason-lspconfig').setup()
 --
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
+
 local servers = {
   -- clangd = {},
   -- gopls = {},
@@ -558,9 +562,6 @@ local servers = {
   pyright = {
     filetypes = { 'python' }
   },
-  -- ruff_lsp = {
-  --   filetypes = { 'python' }
-  -- },
 }
 
 -- Setup neovim lua configuration
@@ -635,8 +636,9 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'gh_issues' },
     { name = 'path' },
-    { name = 'buffer' },
+    { name = 'buffer',   keyword_length = 3 },
     { name = 'luasnip' },
   },
 }

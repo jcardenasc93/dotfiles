@@ -6,7 +6,7 @@ return {
     local opts = {
       lsp_fallback = true,
       async = false,
-      timeout_ms = 600
+      timeout_ms = 1000
     }
 
     conform.setup({
@@ -21,4 +21,3 @@ return {
     end)
   end
 }
-

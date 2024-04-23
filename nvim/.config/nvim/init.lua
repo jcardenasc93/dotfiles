@@ -562,6 +562,9 @@ local servers = {
   pyright = {
     filetypes = { 'python' }
   },
+
+  -- C/C++
+  clangd = {},
 }
 
 -- Setup neovim lua configuration

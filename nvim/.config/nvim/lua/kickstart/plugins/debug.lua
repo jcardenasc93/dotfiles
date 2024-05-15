@@ -52,7 +52,7 @@ return {
     vim.keymap.set('n', '<leader>dt', dap.toggle_breakpoint, { desc = 'Debug: Toggle Breakpoint' })
     vim.keymap.set('n', '<leader>db', dap.clear_breakpoints, { desc = 'Debug: Clear Breakpoints' })
     vim.keymap.set('n', '<leader>dr', dap.repl.toggle, { desc = 'Debug: Toggle REPL' })
-    vim.keymap.set('n', '<leader>dq', dap.close, { desc = 'Debug: Close debug' })
+    vim.keymap.set('n', '<leader>dc', dap.close, { desc = 'Debug: Close debug' })
     vim.keymap.set('n', '<leader>cb', function()
       dap.set_breakpoint(vim.fn.input 'Breakpoint condition: ')
     end, { desc = 'Debug: Set Breakpoint' })
@@ -80,7 +80,7 @@ return {
     }
 
     -- Toggle to see last session result. Without this, you can't see session output in case of unhandled exception.
-    vim.keymap.set('n', '<leader>duq', dapui.close, { desc = 'Debug: See last session result.' })
+    vim.keymap.set('n', '<leader>dq', dapui.close, { desc = 'Close DAPUI' })
 
     -- dap.listeners.before.attach['dapui_config'] = dapui.open
     -- dap.listeners.before.launch['dapui_config'] = dapui.open
@@ -115,7 +115,7 @@ return {
         -- CHANGE THIS to your path!
         command = '/home/jcardenasc93/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb',
         args = { "--port", "${port}" },
-        stdio = { nil, nil, nil }
+        stdio = nil
 
         -- On windows you may have to uncomment this:
         -- detached = false,

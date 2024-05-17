@@ -32,7 +32,8 @@ local options = {
     updatetime = 0,
     timeoutlen = 200,
     mouse = "n",
-    background = "dark"
+    background = "dark",
+    guicursor = ""
 }
 
 for k, v in pairs(options) do

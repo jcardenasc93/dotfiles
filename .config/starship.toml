@@ -19,7 +19,7 @@ format = "[$symbol](fg:sky)[$version](bold sky) "
 # Python
 [python]
 symbol = " "
-format = "[$symbol](fg:green)[($version )]($style)[($virtualenv)](bold yellow)"
+format = "[$symbol](fg:green)[($version )]($style)[($virtualenv )](bold yellow)"
 style = "bold green"
 
 # Lua
@@ -27,6 +27,11 @@ style = "bold green"
 symbol = " "
 style = "bold blue"
 format = "[$symbol($version )]($style)"
+
+# Elixir
+[elixir]
+symbol = " "
+format = "[$symbol($version \\(OTP $otp_version\\) )]($style)"
 
 
 # Catppuccin mocha theme

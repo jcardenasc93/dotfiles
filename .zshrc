@@ -64,36 +64,39 @@ alias cat="bat"
 alias ne='nvim'
 alias syncdots='cd ~/dotfiles && sh sync_dotfiles.sh'
 alias htop='bpytop'
+alias dcr="docker-compose build && docker-compose up"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
 
 
 # Bat theme
 export BAT_THEME="Nord"
 
 # ssh agent load
-alias ssh-l="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/yubi_jc_ed25519"
-ssh-l
+# alias ssh-l="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/yubi_jc_ed25519"
+# ssh-l
 
 # Python ruff-lsp
-export RUFF_LSP_HOME="/home/jcardenasc93/.local/bin"
-export PATH="$PATH:$RUFF_LSP_HOME"
+# export RUFF_LSP_HOME="/home/jcardenasc93/.local/bin"
+# export PATH="$PATH:$RUFF_LSP_HOME"
 
 # Go setup
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+# export PATH=$PATH:/usr/local/go/bin
+# export GOPATH=$HOME/go
+# export GOBIN=$GOPATH/bin
+# export PATH=$PATH:$GOBIN
 
 # Elixir
-export PATH=$PATH:/usr/bin/elixir
+# export PATH=$PATH:/usr/bin/elixir
 
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # Cargo
-export PATH=$PATH:$HOME/.cargo/bin
+# export PATH=$PATH:$HOME/.cargo/bin
 
 # Custom cmds
 # find project

@@ -23,6 +23,7 @@ zinit snippet OMZP::dirhistory
 zinit snippet OMZP::jsontools
 zinit snippet OMZP::z
 zinit snippet OMZP::aliases
+zinit snippet OMZP::asdf
 
 # Load completions
 autoload -U compinit && compinit
@@ -73,8 +74,8 @@ alias dcd="docker-compose down"
 export BAT_THEME="Nord"
 
 # ssh agent load
-# alias ssh-l="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/yubi_jc_ed25519"
-# ssh-l
+alias ssh-l="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/jc_yubik"
+ssh-l
 
 # Python ruff-lsp
 # export RUFF_LSP_HOME="/home/jcardenasc93/.local/bin"
@@ -96,7 +97,7 @@ export BAT_THEME="Nord"
 # eval "$(pyenv virtualenv-init -)"
 
 # Cargo
-# export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 # Custom cmds
 # find project
@@ -109,3 +110,6 @@ nconf() {
   cd ~/.config/nvim && ne .
 }
 
+# direnv asdf
+eval "$(direnv hook zsh)"
+# source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"

@@ -92,8 +92,12 @@ output * bg /usr/share/backgrounds/default.png fill
 # Read `man 5 sway-input` for more information about this section.
 
 ### Startup applications
-exec flameshot
-exec copyq
+# exec flameshot
+
+# Clipboard manager
+# exec wl-paste --watch cliphist store 
+# set $list-clip clipm
+exec wl-paste -t text --watch clipman store
 
 ### Key bindings
 #
@@ -107,14 +111,16 @@ exec copyq
 
     # Start your launcher
     bindsym $mod+space exec $menu
-    # bindsym $mod+space exec $rofi_launcher
-    # bindsym $mod+p exec $rofi_power
+
+    # Show cliboard history
+    bindsym $mod+c exec sh $HOME/.config/sway/scripts/clipm
 
     # Display powermenu
     bindsym $mod+e exec $powermenu
 
     # Start web browser
     bindsym $mod+b exec $browser
+
 
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -128,8 +134,8 @@ exec copyq
     bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
+#     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+# #
 # Moving around:
 #
     # Move your focus around
@@ -198,7 +204,7 @@ exec copyq
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+f floating toggle
 
     # Swap focus between the tiling area and the floating area
     # bindsym $mod+space focus mode_toggle
@@ -251,6 +257,8 @@ exec swayidle -w \
     resume 'swaymsg "output * dpms on"' \
   timeout 600 'systemctl suspend' \
   before-sleep 'exec $lock-now'
+
+exec sway-audio-idle-inhibit
 
 set $lock-now swaylock -e -f -i ~/.config/sway/lock.jpg -s fill --clock --indicator --effect-blur 4x5 --indicator-caps-lock
 set $lidclose 'systemctl suspend-then-hibernate'

@@ -1,6 +1,6 @@
 #### Pkgs Instalation
 # Utils packages
-sudo dnf install -y btop bat neovim zsh tmux fastfetch stow fzf lsd flameshot direnv
+sudo dnf install -y btop bat neovim zsh tmux fastfetch stow fzf lsd flameshot direnv go pulseaudio-libs-devel wayland-devel wayland-protocols-devel meson clipman
 
 # Starship
 curl -sS https://starship.rs/install.sh | sh
@@ -13,3 +13,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## ZSH setup
 chsh -s $(which zsh)
+
+## Auido idle inhibit look https://github.com/ErikReider/SwayAudioIdleInhibit
+git clone https://github.com/ErikReider/SwayAudioIdleInhibit.git

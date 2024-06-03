@@ -68,6 +68,7 @@ alias htop='bpytop'
 alias dcr="docker-compose build && docker-compose up"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
+# alias clipm="cliphist list | rofi -dmenu -theme $HOME/.config/rofi/launchers/type-4/style-4.rasi | cliphist decode | wl-copy"
 
 
 # Bat theme
@@ -82,10 +83,10 @@ ssh-l
 # export PATH="$PATH:$RUFF_LSP_HOME"
 
 # Go setup
-# export PATH=$PATH:/usr/local/go/bin
-# export GOPATH=$HOME/go
-# export GOBIN=$GOPATH/bin
-# export PATH=$PATH:$GOBIN
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
 # Elixir
 # export PATH=$PATH:/usr/bin/elixir
@@ -105,9 +106,22 @@ fp() {
   cd $(find ~/Documents -type d -print | fzf) && ne .
 }
 
+## CONFIGS
 # nvim config
 nconf() {
   cd ~/.config/nvim && ne .
+}
+# Sway config
+sconf() {
+  cd ~/.config/sway/ && ne config
+}
+# tmux config
+tconf() {
+  cd && ne .tmux.conf
+}
+# wezterm config
+wconf() {
+  cd ~/.config/wezterm/ && ne wezterm.lua
 }
 
 # direnv asdf

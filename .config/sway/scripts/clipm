@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+clipman pick --tool=rofi --tool-args="-theme $HOME/.config/rofi/launchers/type-4/style-4.rasi"

@@ -16,7 +16,10 @@ set $right l
 
 # Window gaps
 gaps inner 5px
-gaps outer 5px
+gaps top 3px
+gaps bottom 8px
+gaps right 5px
+gaps left 5px
 
 # Disable window title bar
 default_border none
@@ -113,7 +116,7 @@ exec wl-paste -t text --watch clipman store
     bindsym $mod+space exec $menu
 
     # Show cliboard history
-    bindsym $mod+c exec sh $HOME/.config/sway/scripts/clipm
+    bindsym $mod+Shift+v exec sh $HOME/.config/sway/scripts/clipm
 
     # Display powermenu
     bindsym $mod+e exec $powermenu
@@ -258,11 +261,14 @@ exec swayidle -w \
   timeout 600 'systemctl suspend' \
   before-sleep 'exec $lock-now'
 
-exec sway-audio-idle-inhibit
 
 set $lock-now swaylock -e -f -i ~/.config/sway/lock.jpg -s fill --clock --indicator --effect-blur 4x5 --indicator-caps-lock
 set $lidclose 'systemctl suspend-then-hibernate'
+
+exec sway-audio-idle-inhibit
 bindswitch --reload --locked lid:on exec $lidclose
+for_window [class=".*"] inhibit_idle fullscreen
+for_window [app_id=".*"] inhibit_idle fullscreen
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d

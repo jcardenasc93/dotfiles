@@ -73,6 +73,12 @@ input "2821:6582:Asus_Keyboard" {
     xkb_variant dvorak
     xkb_options compose:rctrl
 }
+input type:touchpad {
+       dwt enabled
+       tap enabled
+       natural_scroll enabled
+       middle_emulation enabled
+   }
 
 input type:keyboard {
     xkb_options compose:rctrl

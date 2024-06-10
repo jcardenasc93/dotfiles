@@ -13,8 +13,9 @@
   "modules-right": [
       "cpu",
       "temperature",
-      "battery",
       "memory",
+      "backlight",
+      "battery",
       "pulseaudio",
       "network",
       "idle_inhibitor",
@@ -48,14 +49,14 @@
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down"
     },
-    "format": "  {:%a %d %b  %H:%M}", //24 hour format
-    "format-alt": "  {:%d/%m/%Y  %H:%M}",
+    "format": "  {:%a %d %b    %H:%M}", //24 hour format
+    "format-alt": "  {:%d/%m/%Y    %H:%M}",
     "interval": 60
   },
 
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{icon} {percent: >3}%",
+    "format": "{icon}  {percent: >3}%",
     "format-icons": ["", ""],
     // "on-scroll-down": "brightnessctl -c backlight set 5%-",
     "on-scroll-down": "light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob",
@@ -83,7 +84,7 @@
   },
 
   "cpu": {
-    "format": "﬙ {usage: >3}%",
+    "format": "  {usage: >3}%",
     "on-click": "wezterm -e htop"
   },
   "temperature": {
@@ -101,7 +102,7 @@
     // "interface": "wlp2s0", // (Optional) To force the use of this interface
     "format": "⚠  Disabled",
     //"format-wifi": "  {essid}({signalStrength}%)",
-    "format-wifi": "  ({signalStrength}%)",
+    "format-wifi": "   ({signalStrength}%)",
     // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
     "format-ethernet": "  Wired",
     "format-disconnected": "⚠  Disconnected",
@@ -115,7 +116,7 @@
       "warning": 35,
       "critical": 15,
     },
-    "format": "{icon} {capacity: >3}%",
+    "format": "{icon}  {capacity: >3}%",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": ["", "", "", "", ""]

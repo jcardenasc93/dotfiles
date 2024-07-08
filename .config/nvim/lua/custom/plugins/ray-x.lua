@@ -20,11 +20,9 @@ return {
         }, bufnr)
       end,
       vim.keymap.set({ 'n' }, '<Leader>ks', function()
-        vim.lsp.buf.signature_help()
+        require('lsp_signature').toggle_float_win()
+        -- vim.lsp.buf.signature_help()
       end, { silent = true, noremap = true, desc = 'toggle signature' })
     })
   end,
-
-
-
 }

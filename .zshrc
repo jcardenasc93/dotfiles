@@ -65,9 +65,9 @@ alias cat="bat"
 alias ne='nvim'
 alias syncdots='cd ~/dotfiles && sh sync_dotfiles.sh'
 alias htop='btop'
-alias dcr="docker-compose build && docker-compose up"
-alias dcu="docker-compose up"
-alias dcd="docker-compose down"
+alias dcr="docker compose build && docker compose up"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
 # alias clipm="cliphist list | rofi -dmenu -theme $HOME/.config/rofi/launchers/type-4/style-4.rasi | cliphist decode | wl-copy"
 
 

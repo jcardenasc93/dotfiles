@@ -18,4 +18,4 @@ chsh -s $(which zsh)
 git clone https://github.com/ErikReider/SwayAudioIdleInhibit.git
 
 ## Devel pkgs
-sudo dnf install make gcc patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2
+sudo dnf install make gcc patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2 ncurses-devel

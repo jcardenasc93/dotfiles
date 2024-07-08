@@ -59,7 +59,7 @@ set $powermenu $HOME/.config/rofi/applets/bin/powermenu.sh
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /usr/share/backgrounds/default.png fill
+output * bg $HOME/.local/share/wallpaper/wall0.jpeg fill
 #
 # Example configuration:
 #

@@ -8,6 +8,7 @@ curl -sS https://starship.rs/install.sh | sh
 # asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
+
 # tmux TMP
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -18,4 +19,8 @@ chsh -s $(which zsh)
 git clone https://github.com/ErikReider/SwayAudioIdleInhibit.git
 
 ## Devel pkgs
-sudo dnf install make gcc patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2 ncurses-devel
+sudo dnf install make gcc patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel libuuid-devel gdbm-libs libnsl2 ncurses-devel autoconf
+sudo dnf groupinstall -y 'Development Tools' 'C Development Tools and Libraries'
+
+# Atuin history manager
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh

@@ -24,6 +24,8 @@ zinit snippet OMZP::jsontools
 zinit snippet OMZP::aliases
 zinit snippet OMZP::asdf
 
+source ~/.local/share/zinit/plugins/pyautoenv/pyautoenv.plugin.zsh
+
 # Load completions
 autoload -U compinit && compinit
 
@@ -74,8 +76,8 @@ alias dcd="docker compose down"
 export BAT_THEME="Nord"
 
 # ssh agent load
-alias ssh-l="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/jc_yubik"
-ssh-l
+# alias ssh-l="eval '$(ssh-agent -s)' && ssh-add ~/.ssh/jc_yubik"
+# ssh-l
 
 # Python ruff-lsp
 # export RUFF_LSP_HOME="/home/jcardenasc93/.local/bin"
@@ -131,8 +133,8 @@ zconf() {
 }
 
 # direnv asdf
-. "$HOME/.asdf/asdf.sh"
-eval "$(direnv hook zsh)"
+# . "$HOME/.asdf/asdf.sh"
+# eval "$(direnv hook zsh)"
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # FZF options

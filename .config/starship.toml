@@ -4,7 +4,7 @@
 palette = "catppuccin_mocha"
 
 # Inserts a blank line between shell prompts
-format = " $all"
+format = " $all"
 add_newline = true
 
 # git
@@ -13,7 +13,7 @@ style = "bold overlay2"
 
 # Go
 [golang]
-symbol = "ﳑ "
+symbol = " "
 format = "[$symbol](fg:sky)[$version](bold sky) "
 
 # Python
@@ -32,6 +32,12 @@ format = "[$symbol($version )]($style)"
 [elixir]
 symbol = " "
 format = "[$symbol($version \\(OTP $otp_version\\) )]($style)"
+
+[package]
+disabled = true
+
+# [docker_context]
+# disabled = true
 
 
 # Catppuccin mocha theme

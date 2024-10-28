@@ -561,7 +561,7 @@ local servers = {
   },
 
   -- Python
-  pyright = {
+  basedpyright = {
     filetypes = { 'python' }
   },
 

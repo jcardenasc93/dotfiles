@@ -325,7 +325,21 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 -- vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 -- vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+function _G.toggle_diagnostics()
+  if vim.diagnostic.is_enabled() then
+    vim.diagnostic.enable(false)
+    vim.diagnostic.config({ virtual_text = false })
+    print('Diagnostics are hidden')
+  else
+    vim.diagnostic.enable(true)
+    vim.diagnostic.config({ virtual_text = true })
+    print('Diagnostics are visible')
+  end
+end
+
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>do', ':call v:lua.toggle_diagnostics()<CR>', { silent = true, noremap = true })
+
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`

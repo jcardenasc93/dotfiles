@@ -22,7 +22,6 @@ zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::dirhistory
 zinit snippet OMZP::jsontools
 zinit snippet OMZP::aliases
-zinit snippet OMZP::asdf
 
 source ~/.local/share/zinit/plugins/pyautoenv/pyautoenv.plugin.zsh
 
@@ -132,11 +131,6 @@ zconf() {
   cd && ne .zshrc
 }
 
-# direnv asdf
-# . "$HOME/.asdf/asdf.sh"
-# eval "$(direnv hook zsh)"
-# source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
-
 # FZF options
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -149,3 +143,6 @@ export FZF_DEFAULT_OPTS=" \
 eval "$(atuin init zsh)"
 # Smarter cd
 eval "$(zoxide init --cmd cd zsh)"
+
+# uv completions
+eval "$(uv generate-shell-completion zsh)"

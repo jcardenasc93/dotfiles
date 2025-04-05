@@ -40,6 +40,8 @@ for k, v in pairs(options) do
     vim.opt[k] = v
 end
 
+vim.o.background = 'dark'
+
 -- Folding
 vim.cmd([[set foldmethod=expr]])
 vim.cmd([[set foldexpr=nvim_treesitter#foldexpr()]])
@@ -47,8 +49,8 @@ vim.cmd([[set foldexpr=nvim_treesitter#foldexpr()]])
 vim.cmd([[let g:go_def_mapping_enabled=0]])
 
 -- Background & colorscheme
-vim.cmd([[highlight Normal ctermbg=NONE guibg=NONE]])
-vim.cmd([[colorscheme catppuccin-mocha]])
+-- vim.cmd([[highlightNormal ctermbg=NONE guibg=NONE]])
+vim.cmd([[colorscheme everforest]])
 
 -- AutoCMDs
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {

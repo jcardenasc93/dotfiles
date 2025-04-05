@@ -146,3 +146,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # uv completions
 eval "$(uv generate-shell-completion zsh)"
+
+
+# Mise (asdf replacement)
+eval "$(~/.local/bin/mise activate zsh)"

@@ -583,7 +583,9 @@ local servers = {
   clangd = {},
 
   -- Elixir
-  elixirls = {},
+  elixirls = {
+    cmd = { vim.fn.expand("~/.config/nvim/elixir-lsp/release/language_server.sh") },
+  },
 
   -- Go
   gopls = {},

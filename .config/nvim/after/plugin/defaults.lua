@@ -49,8 +49,14 @@ vim.cmd([[set foldexpr=nvim_treesitter#foldexpr()]])
 vim.cmd([[let g:go_def_mapping_enabled=0]])
 
 -- Background & colorscheme
--- vim.cmd([[highlightNormal ctermbg=NONE guibg=NONE]])
-vim.cmd([[colorscheme everforest]])
+function Transparent(color)
+    color = color or "everforest"
+    vim.cmd.colorscheme(color)
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
+
+Transparent()
 
 -- AutoCMDs
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {

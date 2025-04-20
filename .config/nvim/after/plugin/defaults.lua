@@ -58,6 +58,8 @@ vim.cmd([[let g:go_def_mapping_enabled=0]])
 --
 -- Transparent()
 vim.cmd.colorscheme("everforest")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 -- AutoCMDs
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {

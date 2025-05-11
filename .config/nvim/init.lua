@@ -149,6 +149,9 @@ vim.o.updatetime = 200
 vim.o.timeoutlen = 200
 vim.o.background = 'dark'
 
+-- Cursor as block for all modes
+vim.opt.guicursor = 'n-v-i-c:block-Cursor'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -159,7 +162,13 @@ vim.o.hlsearch = false
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-vim.keymap.set('n', '<leader>do', ':call v:lua.toggle_diagnostics()<CR>', { silent = true, noremap = true })
+vim.keymap.set('n', '<leader>do', function()
+  if vim.diagnostic.is_enabled() then
+    vim.diagnostic.enable(false)
+  else
+    vim.diagnostic.enable(true)
+  end
+end)
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -233,7 +242,10 @@ require('lazy').setup({
     end,
   },
 
-  'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+  {
+    'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
+    opts = {},
+  },
 
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',

@@ -23,7 +23,7 @@ window#waybar {
   margin-right: 8px;
   background-color: @background;
   border-radius: 5px;
-  padding: 0 6px;
+  padding: 0 6px 0 12px;
 }
 
 .modules-center {

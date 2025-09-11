@@ -23,8 +23,6 @@ zinit snippet OMZP::dirhistory
 zinit snippet OMZP::jsontools
 zinit snippet OMZP::aliases
 
-source ~/.local/share/zinit/plugins/pyautoenv/pyautoenv.plugin.zsh
-
 # Load completions
 autoload -U compinit && compinit
 
@@ -60,7 +58,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 export EDITOR=nvim
 
 # Custom alises
-alias la="lsd -a1l"
+alias la="eza -1la --header"
+alias ls="eza -1l --header"
 alias cat="bat"
 alias ne='nvim'
 alias syncdots='cd ~/dotfiles && sh sync_dotfiles.sh'
@@ -149,4 +148,4 @@ eval "$(uv generate-shell-completion zsh)"
 
 
 # Mise (asdf replacement)
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(/usr/bin/mise activate zsh)"

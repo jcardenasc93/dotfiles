@@ -149,3 +149,6 @@ eval "$(uv generate-shell-completion zsh)"
 
 # Mise (asdf replacement)
 eval "$(/usr/bin/mise activate zsh)"
+
+. "$HOME/.local/share/../bin/env"
+export PATH=~/bin:$PATH

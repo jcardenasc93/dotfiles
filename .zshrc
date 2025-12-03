@@ -148,7 +148,16 @@ eval "$(uv generate-shell-completion zsh)"
 
 
 # Mise (asdf replacement)
-eval "$(/usr/bin/mise activate zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
 
-. "$HOME/.local/share/../bin/env"
-export PATH=~/bin:$PATH
+# . "$HOME/.local/share/../bin/env"
+# export PATH=~/bin:$PATH
+
+# yazi wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}

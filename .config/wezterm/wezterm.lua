@@ -25,8 +25,8 @@ local nord14 = "#A3BE8C"
 local nord15 = "#B48EAD"
 
 config = wezterm.config_builder()
-config.font = wezterm.font("MonaspiceNe Nerd Font")
-config.font_size = 10
+config.font = wezterm.font("GeistMono Nerd Font")
+config.font_size = 11
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 config.color_scheme = "Nord (Gogh)"
 config.window_background_opacity = 0.95
@@ -37,12 +37,17 @@ config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 config.show_new_tab_button_in_tab_bar = false
 
+-- -------------------------------------
+-- Window decorations
+-- -------------------------------------
+
 config.window_padding = {
 	left = 10,
 	right = 10,
 	top = 3,
 	bottom = 3,
 }
+config.window_background_opacity = 0.95
 
 config.leader = { key = "b", mods = "CTRL", timout_milliseconds = 1000 }
 

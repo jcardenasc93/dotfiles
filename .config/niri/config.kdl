@@ -12,7 +12,9 @@ config-notification {
 input {
     keyboard {
         xkb {
-            layout "us" // Use the German keyboard layout
+            layout "us(altgr-intl)"
+            options "compose:rctrl"
+
         }
         numlock // Enable numlock on startup
     }

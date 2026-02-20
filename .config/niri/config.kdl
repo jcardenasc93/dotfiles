@@ -51,7 +51,7 @@ binds {
     MOD+S { spawn-sh "~/.config/niri/niri-scripts/screenshot.sh"; }
     
     // Please choose your own file manager
-    MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
+    MOD+E                             hotkey-overlay-title="File Manager: Yazi" { spawn-sh "wezterm -e yazi"; }
 
     // ─── Media Controls ───
     // Example volume keys mappings for PipeWire & WirePlumber.
@@ -117,15 +117,15 @@ binds {
     MOD+8                               { focus-workspace 8; }
     MOD+9                               { focus-workspace 9; }
 
-    MOD+CTRL+1                          { move-column-to-workspace 1; }
-    MOD+CTRL+2                          { move-column-to-workspace 2; }
-    MOD+CTRL+3                          { move-column-to-workspace 3; }
-    MOD+CTRL+4                          { move-column-to-workspace 4; }
-    MOD+CTRL+5                          { move-column-to-workspace 5; }
-    MOD+CTRL+6                          { move-column-to-workspace 6; }
-    MOD+CTRL+7                          { move-column-to-workspace 7; }
-    MOD+CTRL+8                          { move-column-to-workspace 8; }
-    MOD+CTRL+9                          { move-column-to-workspace 9; }
+    MOD+SHIFT+1                          { move-column-to-workspace 1; }
+    MOD+SHIFT+2                          { move-column-to-workspace 2; }
+    MOD+SHIFT+3                          { move-column-to-workspace 3; }
+    MOD+SHIFT+4                          { move-column-to-workspace 4; }
+    MOD+SHIFT+5                          { move-column-to-workspace 5; }
+    MOD+SHIFT+6                          { move-column-to-workspace 6; }
+    MOD+SHIFT+7                          { move-column-to-workspace 7; }
+    MOD+SHIFT+8                          { move-column-to-workspace 8; }
+    MOD+SHIFT+9                          { move-column-to-workspace 9; }
 
     MOD+TAB                             { focus-workspace-previous; }
 
@@ -337,9 +337,9 @@ layout {
         ELECTRON_OZONE_PLATFORM_HINT "auto"
         QT_QPA_PLATFORM "wayland"
         QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-	QT_QPA_PLATFORMTHEME "gtk3"
-	QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-	GTK_CSD "0"
+        QT_QPA_PLATFORMTHEME "gtk3"
+        QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+        GTK_CSD "0"
         XDG_SESSION_TYPE "wayland"
         XDG_CURRENT_DESKTOP "niri"
     }

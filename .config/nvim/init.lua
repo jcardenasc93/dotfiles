@@ -457,6 +457,12 @@ require('lazy').setup({
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
+          -- Ignore fugitive schemes
+          local buf_name = vim.api.nvim_buf_get_name(event.buf)
+          if buf_name:match '^fugitive://' then
+            return
+          end
+
           -- NOTE: Remember that Lua is a real programming language, and as such it is possible
           -- to define small helper and utility functions so you don't have to repeat yourself.
           --

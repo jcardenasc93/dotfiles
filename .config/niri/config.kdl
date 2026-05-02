@@ -44,7 +44,7 @@ input {
 binds {
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: wezterm" { spawn-sh "wezterm"; }
-    MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "zen-browser"; }
+    MOD+B                               hotkey-overlay-title="Open Browser: helium" { spawn-sh "helium-browser"; }
     MOD+SHIFT+C                         hotkey-overlay-title="Open color pickr" { spawn-sh "hyprpicker -a"; }
 
     // ---- Screenshot ---

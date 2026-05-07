@@ -325,7 +325,7 @@ layout {
     }
 
     window-rule {
-        geometry-corner-radius 15 // Set every window radius to 20
+        geometry-corner-radius 10 // Set every window radius to 10
         clip-to-geometry true
     }
 

@@ -1,0 +1,45 @@
+layout {
+        gaps 10 // Gap between windows
+        center-focused-column "never" // Don’t auto-center focused column
+
+        preset-column-widths {
+            proportion 0.33333
+            proportion 0.5
+            proportion 0.66667
+        }
+
+        background-color "transparent"
+
+        // focus-ring {
+        //     width 2
+        //     active-color "#00ac89"
+        //     inactive-color "#505050"
+        // }
+
+        shadow {
+            softness 30
+            spread 5
+            offset x=0 y=5
+            color "#0007"
+        }
+
+        struts {}
+
+    focus-ring {
+	width 2
+        active-color   "#E7C26C"
+        inactive-color "#8c9388"
+        urgent-color   "#ffb4ab"
+    }
+
+    tab-indicator {
+        active-color   "#E7C26C"
+        inactive-color "#8c9388"
+        urgent-color   "#ffb4ab"
+    }
+
+    insert-hint {
+        color "#a0d49b80"
+    }
+
+}

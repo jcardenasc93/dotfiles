@@ -136,7 +136,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
-. "$HOME/.atuin/bin/env"
+# . "$HOME/.atuin/bin/env"
 
 # Shell history
 eval "$(atuin init zsh)"
@@ -170,3 +170,13 @@ function y() {
 
 # opencode
 export PATH=/home/jcardenasc93/.opencode/bin:$PATH
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk

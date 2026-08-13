@@ -46,7 +46,5 @@ return {
   -- Toogle last buffers
   keymap('n', '<leader>bp', '<Cmd>b#<CR>', {}),
 
-  vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' }),
-  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' }),
   -- vim.cmd.colorscheme 'everforest',
 }

@@ -1,0 +1,31 @@
+2026-08-13T04:13:58.726760Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=46615
+2026-08-13T04:13:58.726797Z  INFO herdr::client: connecting to server path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:13:58.839319Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-13T04:20:52.110105Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=46615
+2026-08-13T04:20:56.718301Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=48541
+2026-08-13T04:20:56.718323Z  INFO herdr::client: connecting to server path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:20:56.904762Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-13T04:45:31.360524Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=58296
+2026-08-13T04:45:31.360550Z  INFO herdr::client: connecting to server path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:45:31.565030Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-13T04:56:50.601531Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=58296
+2026-08-13T04:56:57.273510Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=66077
+2026-08-13T04:56:57.273530Z  INFO herdr::client: connecting to server path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:56:57.366425Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-13T04:57:48.101472Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=66077
+2026-08-13T04:57:50.500599Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=66187
+2026-08-13T04:57:50.500619Z  INFO herdr::client: connecting to server path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:57:50.630320Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-13T04:58:06.052631Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=66187
+2026-08-13T04:58:07.601967Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=66270
+2026-08-13T04:58:07.601987Z  INFO herdr::client: connecting to server path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:58:07.826393Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-13T04:59:17.877703Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=66270
+2026-08-13T04:59:19.223300Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=66750
+2026-08-13T04:59:19.223320Z  INFO herdr::client: connecting to server path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:59:19.401860Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-13T04:59:38.224980Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=66750
+2026-08-13T04:59:39.857412Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=66827
+2026-08-13T04:59:39.857434Z  INFO herdr::client: connecting to server path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:59:40.000300Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-13T05:00:07.486445Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=66827

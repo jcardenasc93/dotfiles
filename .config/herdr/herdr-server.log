@@ -1,0 +1,197 @@
+2026-08-13T04:13:58.677190Z  INFO herdr::api::server: api server listening path=/home/jcardenasc93/.config/herdr/herdr.sock
+2026-08-13T04:13:58.678118Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-13T04:13:58.715412Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-13T04:13:58.716703Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-13T04:13:58.717368Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=46636
+2026-08-13T04:13:58.717534Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w1" pane_id=1
+2026-08-13T04:13:58.717542Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-13T04:13:58.717556Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:13:58.717569Z  INFO herdr::server::headless: created startup workspace cwd=/home/jcardenasc93/.config/ghostty
+2026-08-13T04:13:58.717627Z  INFO herdr::server::headless: client protocol socket listening path=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:13:58.717645Z  INFO herdr::server::headless: herdr server started api_socket=/home/jcardenasc93/.config/herdr/herdr.sock client_socket=/home/jcardenasc93/.config/herdr/herdr-client.sock
+2026-08-13T04:13:58.717781Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=46616
+2026-08-13T04:13:58.839378Z  INFO herdr::server::headless: client connected client_id=2 cols=126 rows=48 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-13T04:13:58.923893Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="qwen"
+2026-08-13T04:14:03.719874Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:14:43.689525Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=47 cols=100 scrollback_limit_bytes=10000000
+2026-08-13T04:14:43.690647Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=46916
+2026-08-13T04:14:43.690806Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:14:48.692980Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:14:56.606759Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:14:57.327894Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:15:02.330327Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:15:32.716641Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=47 cols=100 scrollback_limit_bytes=10000000
+2026-08-13T04:15:32.717803Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=47078
+2026-08-13T04:15:32.717966Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:15:37.719512Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:15:37.938857Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 0, signal: None }"
+2026-08-13T04:15:37.938967Z  INFO herdr::pane: pane session terminated pane=3 pid=47078 signal=Hangup
+2026-08-13T04:15:42.941176Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:15:52.266614Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:15:53.100842Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:15:58.102396Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:15:58.115819Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:15:58.681911Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:16:03.683588Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:19:13.801260Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=4 rows=47 cols=122 scrollback_limit_bytes=10000000
+2026-08-13T04:19:13.802461Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=4 pid=47702
+2026-08-13T04:19:13.802589Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:19:15.197238Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=5 rows=47 cols=61 scrollback_limit_bytes=10000000
+2026-08-13T04:19:15.198485Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=5 pid=47834
+2026-08-13T04:19:15.198626Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:19:17.886287Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:19:18.784221Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:19:20.770223Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:19:21.659099Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:19:22.508209Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:19:27.510707Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:19:59.906419Z  INFO herdr::server::headless: client resize client_id=2 cols=168 rows=48 cell_width_px=0 cell_height_px=0
+2026-08-13T04:20:33.366384Z  INFO herdr::logging: workspace renamed event="workspace.rename" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-13T04:20:38.269471Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:20:40.003244Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-13T04:20:45.004204Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:20:52.109646Z  INFO herdr::server::headless: client detach requested via keybind client_id=2
+2026-08-13T04:20:52.111360Z  INFO herdr::server::headless: client disconnected client_id=2
+2026-08-13T04:20:56.904815Z  INFO herdr::server::headless: client connected client_id=4 cols=168 rows=48 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-13T04:21:10.485970Z  INFO herdr::logging: workspace renamed event="workspace.rename" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-13T04:21:15.487930Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:22:01.612482Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=4 status="ExitStatus { code: 1, signal: None }"
+2026-08-13T04:22:01.616835Z  INFO herdr::pane: pane session terminated pane=4 pid=47702 signal=Hangup
+2026-08-13T04:22:01.616965Z  WARN herdr::app::actions: PaneDied for unknown pane pane=4
+2026-08-13T04:22:02.575461Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=5 status="ExitStatus { code: 1, signal: None }"
+2026-08-13T04:22:02.579582Z  INFO herdr::pane: pane session terminated pane=5 pid=47834 signal=Hangup
+2026-08-13T04:22:02.579753Z  WARN herdr::app::actions: PaneDied for unknown pane pane=5
+2026-08-13T04:22:07.438326Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 0, signal: None }"
+2026-08-13T04:22:07.438471Z  INFO herdr::pane: pane session terminated pane=2 pid=46916 signal=Hangup
+2026-08-13T04:22:12.440346Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:27:35.545498Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=6 rows=47 cols=164 scrollback_limit_bytes=10000000
+2026-08-13T04:27:35.546608Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=6 pid=50028
+2026-08-13T04:27:35.546746Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:27:39.108970Z  INFO herdr::pane: agent changed pane=6 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(50180)
+2026-08-13T04:27:40.549538Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:27:51.036411Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:27:52.982561Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:27:53.463567Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:27:55.909626Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:28:00.911234Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:29:46.895163Z  INFO herdr::app::actions: copied selection to clipboard
+2026-08-13T04:29:49.347140Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:29:54.349043Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:29:59.590254Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:30:04.593062Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:30:05.781366Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:30:10.783948Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:30:36.366764Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:30:41.368598Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:30:49.857986Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:30:54.860553Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:31:02.900947Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:31:07.902874Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:31:14.003945Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:31:19.005129Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:32:24.532180Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=7 rows=47 cols=164 scrollback_limit_bytes=10000000
+2026-08-13T04:32:24.533380Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=7 pid=51130
+2026-08-13T04:32:24.533505Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-13T04:32:29.535984Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:33:55.282357Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:33:57.035408Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:34:02.037029Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:35:07.837313Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-13T04:35:12.839922Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:38:34.656821Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:38:36.197028Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:38:41.199599Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:40:07.532974Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-13T04:40:10.328193Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:40:15.330510Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:41:53.469515Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:41:58.471593Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:42:00.569624Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-13T04:42:01.995687Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:42:03.128730Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:42:03.969695Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-13T04:42:04.709786Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:42:09.711405Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:42:41.519458Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:42:43.226498Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:42:48.228596Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:42:49.603625Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:42:54.606046Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:43:00.117931Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-13T04:43:03.397958Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:43:04.395909Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:43:05.246799Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:43:10.248589Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:43:18.855167Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:43:23.857641Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:43:45.983488Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:43:50.985821Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:43:58.716703Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-13T04:43:58.929310Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="qwen"
+2026-08-13T04:44:28.967472Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:44:33.969422Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:45:00.067058Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:45:01.615926Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-13T04:45:06.617396Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:45:14.298207Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:45:19.301129Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:45:19.926756Z  INFO herdr::server::headless: client detached client_id=4
+2026-08-13T04:45:20.010670Z  INFO herdr::server::headless: client disconnected client_id=4
+2026-08-13T04:45:31.565073Z  INFO herdr::server::headless: client connected client_id=6 cols=126 rows=48 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-13T04:49:02.445126Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-13T04:49:07.446557Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:52:08.765142Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:52:13.767376Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:53:33.737370Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=8 rows=47 cols=122 scrollback_limit_bytes=10000000
+2026-08-13T04:53:33.738686Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=8 pid=63615
+2026-08-13T04:53:33.738832Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:53:38.740963Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:54:00.642778Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:54:01.595726Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:54:04.781401Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=8 status="ExitStatus { code: 1, signal: None }"
+2026-08-13T04:54:04.785805Z  INFO herdr::pane: pane session terminated pane=8 pid=63615 signal=Hangup
+2026-08-13T04:54:04.785927Z  WARN herdr::app::actions: PaneDied for unknown pane pane=8
+2026-08-13T04:54:09.787498Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:56:48.594236Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=9 rows=47 cols=122 scrollback_limit_bytes=10000000
+2026-08-13T04:56:48.595600Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=9 pid=65897
+2026-08-13T04:56:48.595759Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:56:50.601099Z  INFO herdr::server::headless: client detach requested via keybind client_id=6
+2026-08-13T04:56:50.602853Z  INFO herdr::server::headless: client disconnected client_id=6
+2026-08-13T04:56:53.598114Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:56:57.366466Z  INFO herdr::server::headless: client connected client_id=8 cols=126 rows=48 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-13T04:57:02.517214Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:57:07.519679Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:57:47.196980Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:57:48.101058Z  INFO herdr::server::headless: client detach requested via keybind client_id=8
+2026-08-13T04:57:48.102713Z  INFO herdr::server::headless: client disconnected client_id=8
+2026-08-13T04:57:50.630363Z  INFO herdr::server::headless: client connected client_id=10 cols=126 rows=48 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-13T04:57:52.199198Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:57:54.192114Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:57:58.392196Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:58:00.198176Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:58:02.334014Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:58:03.290239Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:58:04.004904Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:58:06.052229Z  INFO herdr::server::headless: client detach requested via keybind client_id=10
+2026-08-13T04:58:06.053778Z  INFO herdr::server::headless: client disconnected client_id=10
+2026-08-13T04:58:07.826430Z  INFO herdr::server::headless: client connected client_id=12 cols=126 rows=48 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-13T04:58:09.006483Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:58:11.184327Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:58:16.187035Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:58:46.406752Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:58:55.258880Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:59:17.877288Z  INFO herdr::server::headless: client detach requested via keybind client_id=12
+2026-08-13T04:59:17.878930Z  INFO herdr::server::headless: client disconnected client_id=12
+2026-08-13T04:59:19.401892Z  INFO herdr::server::headless: client connected client_id=14 cols=126 rows=48 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-13T04:59:37.359625Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:59:38.224563Z  INFO herdr::server::headless: client detach requested via keybind client_id=14
+2026-08-13T04:59:38.226261Z  INFO herdr::server::headless: client disconnected client_id=14
+2026-08-13T04:59:40.000356Z  INFO herdr::server::headless: client connected client_id=16 cols=126 rows=48 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-13T04:59:42.362165Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T04:59:43.605725Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:59:44.999468Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:59:47.046690Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:59:49.123996Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-13T04:59:54.125074Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/jcardenasc93/.config/herdr/session.json workspaces=1
+2026-08-13T05:00:07.485968Z  INFO herdr::server::headless: client detach requested via keybind client_id=16
+2026-08-13T05:00:07.487523Z  INFO herdr::server::headless: client disconnected client_id=16

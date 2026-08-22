@@ -1,0 +1,917 @@
+# : Manager [[[
+
+[mgr]
+cwd = { fg = "#e6e1e4" }
+
+# Find
+find_keyword = { fg = "#ffb4ab", bold = true, italic = true, underline = true }
+find_position = { fg = "#ffb4ab", bold = true, italic = true }
+
+# Marker
+marker_copied = { fg = "#250920", bg = "#250920" }
+marker_cut = { fg = "#250920", bg = "#250920" }
+marker_marked = { fg = "#ffb4ab", bg = "#ffb4ab" }
+marker_selected = { fg = "#e7b9d8", bg = "#e7b9d8" }
+
+# Count
+count_copied = { fg = "#9a728e", bg = "#250920" }
+count_cut = { fg = "#9a728e", bg = "#250920" }
+count_selected = { fg = "#352b4c", bg = "#e7b9d8" }
+
+# Border
+border_style  = { fg = "#cec0ea" }
+
+# : ]]]
+
+
+# : Status [[[
+
+[status]
+overall = { fg = "#cec0ea" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Progress
+progress_label = { bold = true }
+progress_normal = { fg = "#cec0ea", bg = "#141315" }
+progress_error = { fg = "#ffb4ab", bg = "#141315" }
+
+# Permissions
+perm_type = { fg = "#cbc3d6" }
+perm_write = { fg = "#e7b9d8" }
+perm_exec = { fg = "#ffb4ab" }
+perm_read = { fg = "#250920" }
+perm_sep = { fg = "#180e2e" }
+
+# : ]]]
+
+
+# : Mode [[[
+
+[mode]
+
+normal_main = { bg = "#cec0ea", fg = "#352b4c", bold = true }
+normal_alt  = { bg = "#49454d", fg = "#cac4ce" }
+
+select_main = { bg = "#cbc3d6", fg = "#332e3c", bold = true }
+select_alt  = { bg = "#49454d", fg = "#cac4ce" }
+
+unset_main = { bg = "#e7b9d8", fg = "#45263e", bold = true }
+unset_alt  = { bg = "#49454d", fg = "#cac4ce" }
+
+# : ]]]
+
+
+# : Input [[[
+
+[input]
+border = { fg = "#cec0ea" }
+title = {}
+value = { fg = "#e6e1e4" }
+selected = { reversed = true }
+
+# : ]]]
+
+
+# : Tabs [[[
+
+[tabs]
+active = { fg = "#141315", bold = true, bg = "#cec0ea" }
+inactive = { fg = "#cbc3d6", bg = "#141315" }
+sep_inner = { open = "", close = "" }
+
+# : ]]]
+
+
+# : Completion [[[
+
+[cmp]
+border = { fg = "#cec0ea", bg = "#352b4c" }
+
+# : ]]]
+
+
+# : Tasks [[[
+
+[tasks]
+border = { fg = "#cec0ea" }
+title = {}
+hovered = { fg = "#250920", underline = true }
+
+# : ]]]
+
+
+# : Which [[[
+
+[which]
+cols = 3
+mask = { bg = "#141315" }
+cand = { fg = "#cec0ea" }
+rest = { fg = "#352b4c" }
+desc = { fg = "#e6e1e4" }
+separator = " ▶ "
+separator_style = { fg = "#e6e1e4" }
+
+# : ]]]
+
+# : Spotter [[[
+
+[spot]
+border   = { fg = "#cec0ea" }
+title    = { fg = "#cec0ea" }
+tbl_col  = { fg = "#e6e1e4" }
+tbl_cell = { fg = "#e6e1e4", bg = "#141315" }
+
+# : ]]]
+
+
+# : Help [[[
+
+[help]
+on = { fg = "#e6e1e4" }
+run = { fg = "#e6e1e4" }
+hovered = { reversed = true, bold = true }
+footer = { fg = "#332e3c", bg = "#cbc3d6" }
+
+# : ]]]
+
+
+# : Notify [[[
+
+[notify]
+title_info = { fg = "#e7b9d8" }
+title_warn = { fg = "#cec0ea" }
+title_error = { fg = "#ffb4ab" }
+
+# : ]]]
+
+
+# : File-specific styles [[[
+
+[filetype]
+
+rules = [
+    # Images
+    { mime = "image/*", fg = "#cec0ea" },
+
+    # Media
+    { mime = "{audio,video}/*", fg = "#e7b9d8" },
+
+    # Archives
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#cbc3d6" },
+
+    # Documents
+    { mime = "application/{pdf,doc,rtf}", fg = "#e7b9d8" },
+
+    # Special files
+    { mime = "*", is = "orphan", fg = "#ffdad6", bg = "#93000a" },
+    { mime = "application/*exec*", fg = "#ffb4ab" },
+
+    # Fallback
+    { url = "*", fg = "#e6e1e4" },
+    { url = "*/", fg = "#cec0ea" },
+]
+
+# : ]]]
+
+# : Icons {{{
+
+[icon]
+globs = []
+dirs  = [
+	{ name = ".config", text = "", fg = "#cec0ea" },
+	{ name = ".git", text = "", fg = "#cec0ea" },
+	{ name = ".github", text = "", fg = "#cec0ea" },
+	{ name = ".npm", text = "", fg = "#cec0ea" },
+	{ name = "Desktop", text = "", fg = "#cec0ea" },
+	{ name = "Development", text = "", fg = "#cec0ea" },
+	{ name = "Documents", text = "", fg = "#cec0ea" },
+	{ name = "Downloads", text = "", fg = "#cec0ea" },
+	{ name = "Library", text = "", fg = "#cec0ea" },
+	{ name = "Movies", text = "", fg = "#cec0ea" },
+	{ name = "Music", text = "", fg = "#cec0ea" },
+	{ name = "Pictures", text = "", fg = "#cec0ea" },
+	{ name = "Public", text = "", fg = "#cec0ea" },
+	{ name = "Videos", text = "", fg = "#cec0ea" },
+]
+files = [
+	{ name = ".babelrc", text = "", fg = "#cec0ea" },
+	{ name = ".bash_profile", text = "", fg = "#cec0ea" },
+	{ name = ".bashrc", text = "", fg = "#cec0ea" },
+	{ name = ".clang-format", text = "", fg = "#cec0ea" },
+	{ name = ".clang-tidy", text = "", fg = "#cec0ea" },
+	{ name = ".codespellrc", text = "󰓆", fg = "#cec0ea" },
+	{ name = ".condarc", text = "", fg = "#cec0ea" },
+	{ name = ".dockerignore", text = "󰡨", fg = "#cec0ea" },
+	{ name = ".ds_store", text = "", fg = "#cec0ea" },
+	{ name = ".editorconfig", text = "", fg = "#cec0ea" },
+	{ name = ".env", text = "", fg = "#cec0ea" },
+	{ name = ".eslintignore", text = "", fg = "#cec0ea" },
+	{ name = ".eslintrc", text = "", fg = "#cec0ea" },
+	{ name = ".git-blame-ignore-revs", text = "", fg = "#cec0ea" },
+	{ name = ".gitattributes", text = "", fg = "#cec0ea" },
+	{ name = ".gitconfig", text = "", fg = "#cec0ea" },
+	{ name = ".gitignore", text = "", fg = "#cec0ea" },
+	{ name = ".gitlab-ci.yml", text = "", fg = "#cec0ea" },
+	{ name = ".gitmodules", text = "", fg = "#cec0ea" },
+	{ name = ".gtkrc-2.0", text = "", fg = "#cec0ea" },
+	{ name = ".gvimrc", text = "", fg = "#cec0ea" },
+	{ name = ".justfile", text = "", fg = "#cec0ea" },
+	{ name = ".luacheckrc", text = "", fg = "#cec0ea" },
+	{ name = ".luaurc", text = "", fg = "#cec0ea" },
+	{ name = ".mailmap", text = "󰊢", fg = "#cec0ea" },
+	{ name = ".nanorc", text = "", fg = "#cec0ea" },
+	{ name = ".npmignore", text = "", fg = "#cec0ea" },
+	{ name = ".npmrc", text = "", fg = "#cec0ea" },
+	{ name = ".nuxtrc", text = "󱄆", fg = "#cec0ea" },
+	{ name = ".nvmrc", text = "", fg = "#cec0ea" },
+	{ name = ".pnpmfile.cjs", text = "", fg = "#cec0ea" },
+	{ name = ".pre-commit-config.yaml", text = "󰛢", fg = "#cec0ea" },
+	{ name = ".prettierignore", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc.cjs", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc.js", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc.json", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc.json5", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc.mjs", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc.toml", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc.yaml", text = "", fg = "#cec0ea" },
+	{ name = ".prettierrc.yml", text = "", fg = "#cec0ea" },
+	{ name = ".pylintrc", text = "", fg = "#cec0ea" },
+	{ name = ".settings.json", text = "", fg = "#cec0ea" },
+	{ name = ".SRCINFO", text = "󰣇", fg = "#cec0ea" },
+	{ name = ".vimrc", text = "", fg = "#cec0ea" },
+	{ name = ".Xauthority", text = "", fg = "#cec0ea" },
+	{ name = ".xinitrc", text = "", fg = "#cec0ea" },
+	{ name = ".Xresources", text = "", fg = "#cec0ea" },
+	{ name = ".xsession", text = "", fg = "#cec0ea" },
+	{ name = ".zprofile", text = "", fg = "#cec0ea" },
+	{ name = ".zshenv", text = "", fg = "#cec0ea" },
+	{ name = ".zshrc", text = "", fg = "#cec0ea" },
+	{ name = "_gvimrc", text = "", fg = "#cec0ea" },
+	{ name = "_vimrc", text = "", fg = "#cec0ea" },
+	{ name = "AUTHORS", text = "", fg = "#cec0ea" },
+	{ name = "AUTHORS.txt", text = "", fg = "#cec0ea" },
+	{ name = "brewfile", text = "", fg = "#cec0ea" },
+	{ name = "bspwmrc", text = "", fg = "#cec0ea" },
+	{ name = "build", text = "", fg = "#cec0ea" },
+	{ name = "build.gradle", text = "", fg = "#cec0ea" },
+	{ name = "build.zig.zon", text = "", fg = "#cec0ea" },
+	{ name = "bun.lock", text = "", fg = "#cec0ea" },
+	{ name = "bun.lockb", text = "", fg = "#cec0ea" },
+	{ name = "cantorrc", text = "", fg = "#cec0ea" },
+	{ name = "checkhealth", text = "󰓙", fg = "#cec0ea" },
+	{ name = "cmakelists.txt", text = "", fg = "#cec0ea" },
+	{ name = "code_of_conduct", text = "", fg = "#cec0ea" },
+	{ name = "code_of_conduct.md", text = "", fg = "#cec0ea" },
+	{ name = "commit_editmsg", text = "", fg = "#cec0ea" },
+	{ name = "commitlint.config.js", text = "󰜘", fg = "#cec0ea" },
+	{ name = "commitlint.config.ts", text = "󰜘", fg = "#cec0ea" },
+	{ name = "compose.yaml", text = "󰡨", fg = "#cec0ea" },
+	{ name = "compose.yml", text = "󰡨", fg = "#cec0ea" },
+	{ name = "config", text = "", fg = "#cec0ea" },
+	{ name = "containerfile", text = "󰡨", fg = "#cec0ea" },
+	{ name = "copying", text = "", fg = "#cec0ea" },
+	{ name = "copying.lesser", text = "", fg = "#cec0ea" },
+	{ name = "Directory.Build.props", text = "", fg = "#cec0ea" },
+	{ name = "Directory.Build.targets", text = "", fg = "#cec0ea" },
+	{ name = "Directory.Packages.props", text = "", fg = "#cec0ea" },
+	{ name = "docker-compose.yaml", text = "󰡨", fg = "#cec0ea" },
+	{ name = "docker-compose.yml", text = "󰡨", fg = "#cec0ea" },
+	{ name = "dockerfile", text = "󰡨", fg = "#cec0ea" },
+	{ name = "eslint.config.cjs", text = "", fg = "#cec0ea" },
+	{ name = "eslint.config.js", text = "", fg = "#cec0ea" },
+	{ name = "eslint.config.mjs", text = "", fg = "#cec0ea" },
+	{ name = "eslint.config.ts", text = "", fg = "#cec0ea" },
+	{ name = "ext_typoscript_setup.txt", text = "", fg = "#cec0ea" },
+	{ name = "favicon.ico", text = "", fg = "#cec0ea" },
+	{ name = "fp-info-cache", text = "", fg = "#cec0ea" },
+	{ name = "fp-lib-table", text = "", fg = "#cec0ea" },
+	{ name = "FreeCAD.conf", text = "", fg = "#cec0ea" },
+	{ name = "Gemfile", text = "", fg = "#cec0ea" },
+	{ name = "gnumakefile", text = "", fg = "#cec0ea" },
+	{ name = "go.mod", text = "", fg = "#cec0ea" },
+	{ name = "go.sum", text = "", fg = "#cec0ea" },
+	{ name = "go.work", text = "", fg = "#cec0ea" },
+	{ name = "gradle-wrapper.properties", text = "", fg = "#cec0ea" },
+	{ name = "gradle.properties", text = "", fg = "#cec0ea" },
+	{ name = "gradlew", text = "", fg = "#cec0ea" },
+	{ name = "groovy", text = "", fg = "#cec0ea" },
+	{ name = "gruntfile.babel.js", text = "", fg = "#cec0ea" },
+	{ name = "gruntfile.coffee", text = "", fg = "#cec0ea" },
+	{ name = "gruntfile.js", text = "", fg = "#cec0ea" },
+	{ name = "gruntfile.ts", text = "", fg = "#cec0ea" },
+	{ name = "gtkrc", text = "", fg = "#cec0ea" },
+	{ name = "gulpfile.babel.js", text = "", fg = "#cec0ea" },
+	{ name = "gulpfile.coffee", text = "", fg = "#cec0ea" },
+	{ name = "gulpfile.js", text = "", fg = "#cec0ea" },
+	{ name = "gulpfile.ts", text = "", fg = "#cec0ea" },
+	{ name = "hypridle.conf", text = "", fg = "#cec0ea" },
+	{ name = "hyprland.conf", text = "", fg = "#cec0ea" },
+	{ name = "hyprlandd.conf", text = "", fg = "#cec0ea" },
+	{ name = "hyprlock.conf", text = "", fg = "#cec0ea" },
+	{ name = "hyprpaper.conf", text = "", fg = "#cec0ea" },
+	{ name = "hyprsunset.conf", text = "", fg = "#cec0ea" },
+	{ name = "i18n.config.js", text = "󰗊", fg = "#cec0ea" },
+	{ name = "i18n.config.ts", text = "󰗊", fg = "#cec0ea" },
+	{ name = "i3blocks.conf", text = "", fg = "#cec0ea" },
+	{ name = "i3status.conf", text = "", fg = "#cec0ea" },
+	{ name = "index.theme", text = "", fg = "#cec0ea" },
+	{ name = "ionic.config.json", text = "", fg = "#cec0ea" },
+	{ name = "Jenkinsfile", text = "", fg = "#cec0ea" },
+	{ name = "justfile", text = "", fg = "#cec0ea" },
+	{ name = "kalgebrarc", text = "", fg = "#cec0ea" },
+	{ name = "kdeglobals", text = "", fg = "#cec0ea" },
+	{ name = "kdenlive-layoutsrc", text = "", fg = "#cec0ea" },
+	{ name = "kdenliverc", text = "", fg = "#cec0ea" },
+	{ name = "kritadisplayrc", text = "", fg = "#cec0ea" },
+	{ name = "kritarc", text = "", fg = "#cec0ea" },
+	{ name = "license", text = "", fg = "#cec0ea" },
+	{ name = "license.md", text = "", fg = "#cec0ea" },
+	{ name = "lxde-rc.xml", text = "", fg = "#cec0ea" },
+	{ name = "lxqt.conf", text = "", fg = "#cec0ea" },
+	{ name = "makefile", text = "", fg = "#cec0ea" },
+	{ name = "mix.lock", text = "", fg = "#cec0ea" },
+	{ name = "mpv.conf", text = "", fg = "#cec0ea" },
+	{ name = "next.config.cjs", text = "", fg = "#cec0ea" },
+	{ name = "next.config.js", text = "", fg = "#cec0ea" },
+	{ name = "next.config.ts", text = "", fg = "#cec0ea" },
+	{ name = "node_modules", text = "", fg = "#cec0ea" },
+	{ name = "nuxt.config.cjs", text = "󱄆", fg = "#cec0ea" },
+	{ name = "nuxt.config.js", text = "󱄆", fg = "#cec0ea" },
+	{ name = "nuxt.config.mjs", text = "󱄆", fg = "#cec0ea" },
+	{ name = "nuxt.config.ts", text = "󱄆", fg = "#cec0ea" },
+	{ name = "package-lock.json", text = "", fg = "#cec0ea" },
+	{ name = "package.json", text = "", fg = "#cec0ea" },
+	{ name = "PKGBUILD", text = "", fg = "#cec0ea" },
+	{ name = "platformio.ini", text = "", fg = "#cec0ea" },
+	{ name = "playwright.config.cjs", text = "", fg = "#cec0ea" },
+	{ name = "playwright.config.cts", text = "", fg = "#cec0ea" },
+	{ name = "playwright.config.js", text = "", fg = "#cec0ea" },
+	{ name = "playwright.config.mjs", text = "", fg = "#cec0ea" },
+	{ name = "playwright.config.mts", text = "", fg = "#cec0ea" },
+	{ name = "playwright.config.ts", text = "", fg = "#cec0ea" },
+	{ name = "pnpm-lock.yaml", text = "", fg = "#cec0ea" },
+	{ name = "pnpm-workspace.yaml", text = "", fg = "#cec0ea" },
+	{ name = "pom.xml", text = "", fg = "#cec0ea" },
+	{ name = "prettier.config.cjs", text = "", fg = "#cec0ea" },
+	{ name = "prettier.config.js", text = "", fg = "#cec0ea" },
+	{ name = "prettier.config.mjs", text = "", fg = "#cec0ea" },
+	{ name = "prettier.config.ts", text = "", fg = "#cec0ea" },
+	{ name = "prisma.config.mts", text = "", fg = "#cec0ea" },
+	{ name = "prisma.config.ts", text = "", fg = "#cec0ea" },
+	{ name = "procfile", text = "", fg = "#cec0ea" },
+	{ name = "PrusaSlicer.ini", text = "", fg = "#cec0ea" },
+	{ name = "PrusaSlicerGcodeViewer.ini", text = "", fg = "#cec0ea" },
+	{ name = "py.typed", text = "", fg = "#cec0ea" },
+	{ name = "QtProject.conf", text = "", fg = "#cec0ea" },
+	{ name = "rakefile", text = "", fg = "#cec0ea" },
+	{ name = "readme", text = "󰂺", fg = "#cec0ea" },
+	{ name = "readme.md", text = "󰂺", fg = "#cec0ea" },
+	{ name = "rmd", text = "", fg = "#cec0ea" },
+	{ name = "robots.txt", text = "󰚩", fg = "#cec0ea" },
+	{ name = "security", text = "󰒃", fg = "#cec0ea" },
+	{ name = "security.md", text = "󰒃", fg = "#cec0ea" },
+	{ name = "settings.gradle", text = "", fg = "#cec0ea" },
+	{ name = "svelte.config.js", text = "", fg = "#cec0ea" },
+	{ name = "sxhkdrc", text = "", fg = "#cec0ea" },
+	{ name = "sym-lib-table", text = "", fg = "#cec0ea" },
+	{ name = "tailwind.config.js", text = "󱏿", fg = "#cec0ea" },
+	{ name = "tailwind.config.mjs", text = "󱏿", fg = "#cec0ea" },
+	{ name = "tailwind.config.ts", text = "󱏿", fg = "#cec0ea" },
+	{ name = "tmux.conf", text = "", fg = "#cec0ea" },
+	{ name = "tmux.conf.local", text = "", fg = "#cec0ea" },
+	{ name = "tsconfig.json", text = "", fg = "#cec0ea" },
+	{ name = "unlicense", text = "", fg = "#cec0ea" },
+	{ name = "vagrantfile", text = "", fg = "#cec0ea" },
+	{ name = "vercel.json", text = "", fg = "#cec0ea" },
+	{ name = "vite.config.cjs", text = "", fg = "#cec0ea" },
+	{ name = "vite.config.cts", text = "", fg = "#cec0ea" },
+	{ name = "vite.config.js", text = "", fg = "#cec0ea" },
+	{ name = "vite.config.mjs", text = "", fg = "#cec0ea" },
+	{ name = "vite.config.mts", text = "", fg = "#cec0ea" },
+	{ name = "vite.config.ts", text = "", fg = "#cec0ea" },
+	{ name = "vitest.config.cjs", text = "", fg = "#cec0ea" },
+	{ name = "vitest.config.cts", text = "", fg = "#cec0ea" },
+	{ name = "vitest.config.js", text = "", fg = "#cec0ea" },
+	{ name = "vitest.config.mjs", text = "", fg = "#cec0ea" },
+	{ name = "vitest.config.mts", text = "", fg = "#cec0ea" },
+	{ name = "vitest.config.ts", text = "", fg = "#cec0ea" },
+	{ name = "vlcrc", text = "󰕼", fg = "#cec0ea" },
+	{ name = "webpack", text = "󰜫", fg = "#cec0ea" },
+	{ name = "weston.ini", text = "", fg = "#cec0ea" },
+	{ name = "workspace", text = "", fg = "#cec0ea" },
+	{ name = "wrangler.jsonc", text = "", fg = "#cec0ea" },
+	{ name = "wrangler.toml", text = "", fg = "#cec0ea" },
+	{ name = "xdph.conf", text = "", fg = "#cec0ea" },
+	{ name = "xmobarrc", text = "", fg = "#cec0ea" },
+	{ name = "xmobarrc.hs", text = "", fg = "#cec0ea" },
+	{ name = "xmonad.hs", text = "", fg = "#cec0ea" },
+	{ name = "xorg.conf", text = "", fg = "#cec0ea" },
+	{ name = "xsettingsd.conf", text = "", fg = "#cec0ea" },
+]
+exts = [
+	{ name = "3gp", text = "", fg = "#cec0ea" },
+	{ name = "3mf", text = "󰆧", fg = "#cec0ea" },
+	{ name = "7z", text = "", fg = "#cec0ea" },
+	{ name = "a", text = "", fg = "#cec0ea" },
+	{ name = "aac", text = "", fg = "#cec0ea" },
+	{ name = "ada", text = "", fg = "#cec0ea" },
+	{ name = "adb", text = "", fg = "#cec0ea" },
+	{ name = "ads", text = "", fg = "#cec0ea" },
+	{ name = "ai", text = "", fg = "#cec0ea" },
+	{ name = "aif", text = "", fg = "#cec0ea" },
+	{ name = "aiff", text = "", fg = "#cec0ea" },
+	{ name = "android", text = "", fg = "#cec0ea" },
+	{ name = "ape", text = "", fg = "#cec0ea" },
+	{ name = "apk", text = "", fg = "#cec0ea" },
+	{ name = "apl", text = "", fg = "#cec0ea" },
+	{ name = "app", text = "", fg = "#cec0ea" },
+	{ name = "applescript", text = "", fg = "#cec0ea" },
+	{ name = "asc", text = "󰦝", fg = "#cec0ea" },
+	{ name = "asm", text = "", fg = "#cec0ea" },
+	{ name = "ass", text = "󰨖", fg = "#cec0ea" },
+	{ name = "astro", text = "", fg = "#cec0ea" },
+	{ name = "avif", text = "", fg = "#cec0ea" },
+	{ name = "awk", text = "", fg = "#cec0ea" },
+	{ name = "azcli", text = "", fg = "#cec0ea" },
+	{ name = "bak", text = "󰁯", fg = "#cec0ea" },
+	{ name = "bash", text = "", fg = "#cec0ea" },
+	{ name = "bat", text = "", fg = "#cec0ea" },
+	{ name = "bazel", text = "", fg = "#cec0ea" },
+	{ name = "bib", text = "󱉟", fg = "#cec0ea" },
+	{ name = "bicep", text = "", fg = "#cec0ea" },
+	{ name = "bicepparam", text = "", fg = "#cec0ea" },
+	{ name = "bin", text = "", fg = "#cec0ea" },
+	{ name = "blade.php", text = "", fg = "#cec0ea" },
+	{ name = "blend", text = "󰂫", fg = "#cec0ea" },
+	{ name = "blp", text = "󰺾", fg = "#cec0ea" },
+	{ name = "bmp", text = "", fg = "#cec0ea" },
+	{ name = "bqn", text = "", fg = "#cec0ea" },
+	{ name = "brep", text = "󰻫", fg = "#cec0ea" },
+	{ name = "bz", text = "", fg = "#cec0ea" },
+	{ name = "bz2", text = "", fg = "#cec0ea" },
+	{ name = "bz3", text = "", fg = "#cec0ea" },
+	{ name = "bzl", text = "", fg = "#cec0ea" },
+	{ name = "c", text = "", fg = "#cec0ea" },
+	{ name = "c++", text = "", fg = "#cec0ea" },
+	{ name = "cache", text = "", fg = "#cec0ea" },
+	{ name = "cast", text = "", fg = "#cec0ea" },
+	{ name = "cbl", text = "", fg = "#cec0ea" },
+	{ name = "cc", text = "", fg = "#cec0ea" },
+	{ name = "ccm", text = "", fg = "#cec0ea" },
+	{ name = "cfc", text = "", fg = "#cec0ea" },
+	{ name = "cfg", text = "", fg = "#cec0ea" },
+	{ name = "cfm", text = "", fg = "#cec0ea" },
+	{ name = "cjs", text = "", fg = "#cec0ea" },
+	{ name = "clj", text = "", fg = "#cec0ea" },
+	{ name = "cljc", text = "", fg = "#cec0ea" },
+	{ name = "cljd", text = "", fg = "#cec0ea" },
+	{ name = "cljs", text = "", fg = "#cec0ea" },
+	{ name = "cmake", text = "", fg = "#cec0ea" },
+	{ name = "cob", text = "", fg = "#cec0ea" },
+	{ name = "cobol", text = "", fg = "#cec0ea" },
+	{ name = "coffee", text = "", fg = "#cec0ea" },
+	{ name = "conda", text = "", fg = "#cec0ea" },
+	{ name = "conf", text = "", fg = "#cec0ea" },
+	{ name = "config.ru", text = "", fg = "#cec0ea" },
+	{ name = "cow", text = "󰆚", fg = "#cec0ea" },
+	{ name = "cp", text = "", fg = "#cec0ea" },
+	{ name = "cpp", text = "", fg = "#cec0ea" },
+	{ name = "cppm", text = "", fg = "#cec0ea" },
+	{ name = "cpy", text = "", fg = "#cec0ea" },
+	{ name = "cr", text = "", fg = "#cec0ea" },
+	{ name = "crdownload", text = "", fg = "#cec0ea" },
+	{ name = "cs", text = "󰌛", fg = "#cec0ea" },
+	{ name = "csh", text = "", fg = "#cec0ea" },
+	{ name = "cshtml", text = "󱦗", fg = "#cec0ea" },
+	{ name = "cson", text = "", fg = "#cec0ea" },
+	{ name = "csproj", text = "󰪮", fg = "#cec0ea" },
+	{ name = "css", text = "", fg = "#cec0ea" },
+	{ name = "csv", text = "", fg = "#cec0ea" },
+	{ name = "cts", text = "", fg = "#cec0ea" },
+	{ name = "cu", text = "", fg = "#cec0ea" },
+	{ name = "cue", text = "󰲹", fg = "#cec0ea" },
+	{ name = "cuh", text = "", fg = "#cec0ea" },
+	{ name = "cxx", text = "", fg = "#cec0ea" },
+	{ name = "cxxm", text = "", fg = "#cec0ea" },
+	{ name = "d", text = "", fg = "#cec0ea" },
+	{ name = "d.ts", text = "", fg = "#cec0ea" },
+	{ name = "dart", text = "", fg = "#cec0ea" },
+	{ name = "db", text = "", fg = "#cec0ea" },
+	{ name = "dconf", text = "", fg = "#cec0ea" },
+	{ name = "desktop", text = "", fg = "#cec0ea" },
+	{ name = "diff", text = "", fg = "#cec0ea" },
+	{ name = "dll", text = "", fg = "#cec0ea" },
+	{ name = "doc", text = "󰈬", fg = "#cec0ea" },
+	{ name = "Dockerfile", text = "󰡨", fg = "#cec0ea" },
+	{ name = "dockerignore", text = "󰡨", fg = "#cec0ea" },
+	{ name = "docx", text = "󰈬", fg = "#cec0ea" },
+	{ name = "dot", text = "󱁉", fg = "#cec0ea" },
+	{ name = "download", text = "", fg = "#cec0ea" },
+	{ name = "drl", text = "", fg = "#cec0ea" },
+	{ name = "dropbox", text = "", fg = "#cec0ea" },
+	{ name = "dump", text = "", fg = "#cec0ea" },
+	{ name = "dwg", text = "󰻫", fg = "#cec0ea" },
+	{ name = "dxf", text = "󰻫", fg = "#cec0ea" },
+	{ name = "ebook", text = "", fg = "#cec0ea" },
+	{ name = "ebuild", text = "", fg = "#cec0ea" },
+	{ name = "edn", text = "", fg = "#cec0ea" },
+	{ name = "eex", text = "", fg = "#cec0ea" },
+	{ name = "ejs", text = "", fg = "#cec0ea" },
+	{ name = "el", text = "", fg = "#cec0ea" },
+	{ name = "elc", text = "", fg = "#cec0ea" },
+	{ name = "elf", text = "", fg = "#cec0ea" },
+	{ name = "elm", text = "", fg = "#cec0ea" },
+	{ name = "eln", text = "", fg = "#cec0ea" },
+	{ name = "env", text = "", fg = "#cec0ea" },
+	{ name = "eot", text = "", fg = "#cec0ea" },
+	{ name = "epp", text = "", fg = "#cec0ea" },
+	{ name = "epub", text = "", fg = "#cec0ea" },
+	{ name = "erb", text = "", fg = "#cec0ea" },
+	{ name = "erl", text = "", fg = "#cec0ea" },
+	{ name = "ex", text = "", fg = "#cec0ea" },
+	{ name = "exe", text = "", fg = "#cec0ea" },
+	{ name = "exs", text = "", fg = "#cec0ea" },
+	{ name = "f#", text = "", fg = "#cec0ea" },
+	{ name = "f3d", text = "󰻫", fg = "#cec0ea" },
+	{ name = "f90", text = "󱈚", fg = "#cec0ea" },
+	{ name = "fbx", text = "󰆧", fg = "#cec0ea" },
+	{ name = "fcbak", text = "", fg = "#cec0ea" },
+	{ name = "fcmacro", text = "", fg = "#cec0ea" },
+	{ name = "fcmat", text = "", fg = "#cec0ea" },
+	{ name = "fcparam", text = "", fg = "#cec0ea" },
+	{ name = "fcscript", text = "", fg = "#cec0ea" },
+	{ name = "fcstd", text = "", fg = "#cec0ea" },
+	{ name = "fcstd1", text = "", fg = "#cec0ea" },
+	{ name = "fctb", text = "", fg = "#cec0ea" },
+	{ name = "fctl", text = "", fg = "#cec0ea" },
+	{ name = "fdmdownload", text = "", fg = "#cec0ea" },
+	{ name = "feature", text = "", fg = "#cec0ea" },
+	{ name = "fish", text = "", fg = "#cec0ea" },
+	{ name = "flac", text = "", fg = "#cec0ea" },
+	{ name = "flc", text = "", fg = "#cec0ea" },
+	{ name = "flf", text = "", fg = "#cec0ea" },
+	{ name = "fnl", text = "", fg = "#cec0ea" },
+	{ name = "fodg", text = "", fg = "#cec0ea" },
+	{ name = "fodp", text = "", fg = "#cec0ea" },
+	{ name = "fods", text = "", fg = "#cec0ea" },
+	{ name = "fodt", text = "", fg = "#cec0ea" },
+	{ name = "frag", text = "", fg = "#cec0ea" },
+	{ name = "fs", text = "", fg = "#cec0ea" },
+	{ name = "fsi", text = "", fg = "#cec0ea" },
+	{ name = "fsscript", text = "", fg = "#cec0ea" },
+	{ name = "fsx", text = "", fg = "#cec0ea" },
+	{ name = "gcode", text = "󰐫", fg = "#cec0ea" },
+	{ name = "gd", text = "", fg = "#cec0ea" },
+	{ name = "gemspec", text = "", fg = "#cec0ea" },
+	{ name = "geom", text = "", fg = "#cec0ea" },
+	{ name = "gif", text = "", fg = "#cec0ea" },
+	{ name = "git", text = "", fg = "#cec0ea" },
+	{ name = "glb", text = "", fg = "#cec0ea" },
+	{ name = "gleam", text = "", fg = "#cec0ea" },
+	{ name = "glsl", text = "", fg = "#cec0ea" },
+	{ name = "gnumakefile", text = "", fg = "#cec0ea" },
+	{ name = "go", text = "", fg = "#cec0ea" },
+	{ name = "godot", text = "", fg = "#cec0ea" },
+	{ name = "gpr", text = "", fg = "#cec0ea" },
+	{ name = "gql", text = "", fg = "#cec0ea" },
+	{ name = "gradle", text = "", fg = "#cec0ea" },
+	{ name = "graphql", text = "", fg = "#cec0ea" },
+	{ name = "gresource", text = "", fg = "#cec0ea" },
+	{ name = "gv", text = "󱁉", fg = "#cec0ea" },
+	{ name = "gz", text = "", fg = "#cec0ea" },
+	{ name = "h", text = "", fg = "#cec0ea" },
+	{ name = "haml", text = "", fg = "#cec0ea" },
+	{ name = "hbs", text = "", fg = "#cec0ea" },
+	{ name = "heex", text = "", fg = "#cec0ea" },
+	{ name = "hex", text = "", fg = "#cec0ea" },
+	{ name = "hh", text = "", fg = "#cec0ea" },
+	{ name = "hpp", text = "", fg = "#cec0ea" },
+	{ name = "hrl", text = "", fg = "#cec0ea" },
+	{ name = "hs", text = "", fg = "#cec0ea" },
+	{ name = "htm", text = "", fg = "#cec0ea" },
+	{ name = "html", text = "", fg = "#cec0ea" },
+	{ name = "http", text = "", fg = "#cec0ea" },
+	{ name = "huff", text = "󰡘", fg = "#cec0ea" },
+	{ name = "hurl", text = "", fg = "#cec0ea" },
+	{ name = "hx", text = "", fg = "#cec0ea" },
+	{ name = "hxx", text = "", fg = "#cec0ea" },
+	{ name = "ical", text = "", fg = "#cec0ea" },
+	{ name = "icalendar", text = "", fg = "#cec0ea" },
+	{ name = "ico", text = "", fg = "#cec0ea" },
+	{ name = "ics", text = "", fg = "#cec0ea" },
+	{ name = "ifb", text = "", fg = "#cec0ea" },
+	{ name = "ifc", text = "󰻫", fg = "#cec0ea" },
+	{ name = "ige", text = "󰻫", fg = "#cec0ea" },
+	{ name = "iges", text = "󰻫", fg = "#cec0ea" },
+	{ name = "igs", text = "󰻫", fg = "#cec0ea" },
+	{ name = "image", text = "", fg = "#cec0ea" },
+	{ name = "img", text = "", fg = "#cec0ea" },
+	{ name = "import", text = "", fg = "#cec0ea" },
+	{ name = "info", text = "", fg = "#cec0ea" },
+	{ name = "ini", text = "", fg = "#cec0ea" },
+	{ name = "ino", text = "", fg = "#cec0ea" },
+	{ name = "ipynb", text = "", fg = "#cec0ea" },
+	{ name = "iso", text = "", fg = "#cec0ea" },
+	{ name = "ixx", text = "", fg = "#cec0ea" },
+	{ name = "jar", text = "", fg = "#cec0ea" },
+	{ name = "java", text = "", fg = "#cec0ea" },
+	{ name = "jl", text = "", fg = "#cec0ea" },
+	{ name = "jpeg", text = "", fg = "#cec0ea" },
+	{ name = "jpg", text = "", fg = "#cec0ea" },
+	{ name = "js", text = "", fg = "#cec0ea" },
+	{ name = "json", text = "", fg = "#cec0ea" },
+	{ name = "json5", text = "", fg = "#cec0ea" },
+	{ name = "jsonc", text = "", fg = "#cec0ea" },
+	{ name = "jsx", text = "", fg = "#cec0ea" },
+	{ name = "jwmrc", text = "", fg = "#cec0ea" },
+	{ name = "jxl", text = "", fg = "#cec0ea" },
+	{ name = "kbx", text = "󰯄", fg = "#cec0ea" },
+	{ name = "kdb", text = "", fg = "#cec0ea" },
+	{ name = "kdbx", text = "", fg = "#cec0ea" },
+	{ name = "kdenlive", text = "", fg = "#cec0ea" },
+	{ name = "kdenlivetitle", text = "", fg = "#cec0ea" },
+	{ name = "kicad_dru", text = "", fg = "#cec0ea" },
+	{ name = "kicad_mod", text = "", fg = "#cec0ea" },
+	{ name = "kicad_pcb", text = "", fg = "#cec0ea" },
+	{ name = "kicad_prl", text = "", fg = "#cec0ea" },
+	{ name = "kicad_pro", text = "", fg = "#cec0ea" },
+	{ name = "kicad_sch", text = "", fg = "#cec0ea" },
+	{ name = "kicad_sym", text = "", fg = "#cec0ea" },
+	{ name = "kicad_wks", text = "", fg = "#cec0ea" },
+	{ name = "ko", text = "", fg = "#cec0ea" },
+	{ name = "kpp", text = "", fg = "#cec0ea" },
+	{ name = "kra", text = "", fg = "#cec0ea" },
+	{ name = "krz", text = "", fg = "#cec0ea" },
+	{ name = "ksh", text = "", fg = "#cec0ea" },
+	{ name = "kt", text = "", fg = "#cec0ea" },
+	{ name = "kts", text = "", fg = "#cec0ea" },
+	{ name = "lck", text = "", fg = "#cec0ea" },
+	{ name = "leex", text = "", fg = "#cec0ea" },
+	{ name = "less", text = "", fg = "#cec0ea" },
+	{ name = "lff", text = "", fg = "#cec0ea" },
+	{ name = "lhs", text = "", fg = "#cec0ea" },
+	{ name = "lib", text = "", fg = "#cec0ea" },
+	{ name = "license", text = "", fg = "#cec0ea" },
+	{ name = "liquid", text = "", fg = "#cec0ea" },
+	{ name = "lock", text = "", fg = "#cec0ea" },
+	{ name = "log", text = "󰌱", fg = "#cec0ea" },
+	{ name = "lrc", text = "󰨖", fg = "#cec0ea" },
+	{ name = "lua", text = "", fg = "#cec0ea" },
+	{ name = "luac", text = "", fg = "#cec0ea" },
+	{ name = "luau", text = "", fg = "#cec0ea" },
+	{ name = "m", text = "", fg = "#cec0ea" },
+	{ name = "m3u", text = "󰲹", fg = "#cec0ea" },
+	{ name = "m3u8", text = "󰲹", fg = "#cec0ea" },
+	{ name = "m4a", text = "", fg = "#cec0ea" },
+	{ name = "m4v", text = "", fg = "#cec0ea" },
+	{ name = "magnet", text = "", fg = "#cec0ea" },
+	{ name = "makefile", text = "", fg = "#cec0ea" },
+	{ name = "markdown", text = "", fg = "#cec0ea" },
+	{ name = "material", text = "", fg = "#cec0ea" },
+	{ name = "md", text = "", fg = "#cec0ea" },
+	{ name = "md5", text = "󰕥", fg = "#cec0ea" },
+	{ name = "mdx", text = "", fg = "#cec0ea" },
+	{ name = "mint", text = "󰌪", fg = "#cec0ea" },
+	{ name = "mjs", text = "", fg = "#cec0ea" },
+	{ name = "mk", text = "", fg = "#cec0ea" },
+	{ name = "mkv", text = "", fg = "#cec0ea" },
+	{ name = "ml", text = "", fg = "#cec0ea" },
+	{ name = "mli", text = "", fg = "#cec0ea" },
+	{ name = "mm", text = "", fg = "#cec0ea" },
+	{ name = "mo", text = "", fg = "#cec0ea" },
+	{ name = "mobi", text = "", fg = "#cec0ea" },
+	{ name = "mojo", text = "", fg = "#cec0ea" },
+	{ name = "mov", text = "", fg = "#cec0ea" },
+	{ name = "mp3", text = "", fg = "#cec0ea" },
+	{ name = "mp4", text = "", fg = "#cec0ea" },
+	{ name = "mpp", text = "", fg = "#cec0ea" },
+	{ name = "msf", text = "", fg = "#cec0ea" },
+	{ name = "mts", text = "", fg = "#cec0ea" },
+	{ name = "mustache", text = "", fg = "#cec0ea" },
+	{ name = "nfo", text = "", fg = "#cec0ea" },
+	{ name = "nim", text = "", fg = "#cec0ea" },
+	{ name = "nix", text = "", fg = "#cec0ea" },
+	{ name = "norg", text = "", fg = "#cec0ea" },
+	{ name = "nswag", text = "", fg = "#cec0ea" },
+	{ name = "nu", text = "", fg = "#cec0ea" },
+	{ name = "o", text = "", fg = "#cec0ea" },
+	{ name = "obj", text = "󰆧", fg = "#cec0ea" },
+	{ name = "odf", text = "", fg = "#cec0ea" },
+	{ name = "odg", text = "", fg = "#cec0ea" },
+	{ name = "odin", text = "󰟢", fg = "#cec0ea" },
+	{ name = "odp", text = "", fg = "#cec0ea" },
+	{ name = "ods", text = "", fg = "#cec0ea" },
+	{ name = "odt", text = "", fg = "#cec0ea" },
+	{ name = "oga", text = "", fg = "#cec0ea" },
+	{ name = "ogg", text = "", fg = "#cec0ea" },
+	{ name = "ogv", text = "", fg = "#cec0ea" },
+	{ name = "ogx", text = "", fg = "#cec0ea" },
+	{ name = "opus", text = "", fg = "#cec0ea" },
+	{ name = "org", text = "", fg = "#cec0ea" },
+	{ name = "otf", text = "", fg = "#cec0ea" },
+	{ name = "out", text = "", fg = "#cec0ea" },
+	{ name = "part", text = "", fg = "#cec0ea" },
+	{ name = "patch", text = "", fg = "#cec0ea" },
+	{ name = "pck", text = "", fg = "#cec0ea" },
+	{ name = "pcm", text = "", fg = "#cec0ea" },
+	{ name = "pdf", text = "", fg = "#cec0ea" },
+	{ name = "php", text = "", fg = "#cec0ea" },
+	{ name = "pl", text = "", fg = "#cec0ea" },
+	{ name = "pls", text = "󰲹", fg = "#cec0ea" },
+	{ name = "ply", text = "󰆧", fg = "#cec0ea" },
+	{ name = "pm", text = "", fg = "#cec0ea" },
+	{ name = "png", text = "", fg = "#cec0ea" },
+	{ name = "po", text = "", fg = "#cec0ea" },
+	{ name = "pot", text = "", fg = "#cec0ea" },
+	{ name = "pp", text = "", fg = "#cec0ea" },
+	{ name = "ppt", text = "󰈧", fg = "#cec0ea" },
+	{ name = "pptx", text = "󰈧", fg = "#cec0ea" },
+	{ name = "prisma", text = "", fg = "#cec0ea" },
+	{ name = "pro", text = "", fg = "#cec0ea" },
+	{ name = "ps1", text = "󰨊", fg = "#cec0ea" },
+	{ name = "psb", text = "", fg = "#cec0ea" },
+	{ name = "psd", text = "", fg = "#cec0ea" },
+	{ name = "psd1", text = "󰨊", fg = "#cec0ea" },
+	{ name = "psm1", text = "󰨊", fg = "#cec0ea" },
+	{ name = "pub", text = "󰷖", fg = "#cec0ea" },
+	{ name = "pxd", text = "", fg = "#cec0ea" },
+	{ name = "pxi", text = "", fg = "#cec0ea" },
+	{ name = "py", text = "", fg = "#cec0ea" },
+	{ name = "pyc", text = "", fg = "#cec0ea" },
+	{ name = "pyd", text = "", fg = "#cec0ea" },
+	{ name = "pyi", text = "", fg = "#cec0ea" },
+	{ name = "pyo", text = "", fg = "#cec0ea" },
+	{ name = "pyw", text = "", fg = "#cec0ea" },
+	{ name = "pyx", text = "", fg = "#cec0ea" },
+	{ name = "qm", text = "", fg = "#cec0ea" },
+	{ name = "qml", text = "", fg = "#cec0ea" },
+	{ name = "qrc", text = "", fg = "#cec0ea" },
+	{ name = "qss", text = "", fg = "#cec0ea" },
+	{ name = "query", text = "", fg = "#cec0ea" },
+	{ name = "R", text = "󰟔", fg = "#cec0ea" },
+	{ name = "r", text = "󰟔", fg = "#cec0ea" },
+	{ name = "rake", text = "", fg = "#cec0ea" },
+	{ name = "rar", text = "", fg = "#cec0ea" },
+	{ name = "rasi", text = "", fg = "#cec0ea" },
+	{ name = "razor", text = "󱦘", fg = "#cec0ea" },
+	{ name = "rb", text = "", fg = "#cec0ea" },
+	{ name = "res", text = "", fg = "#cec0ea" },
+	{ name = "resi", text = "", fg = "#cec0ea" },
+	{ name = "rlib", text = "", fg = "#cec0ea" },
+	{ name = "rmd", text = "", fg = "#cec0ea" },
+	{ name = "rproj", text = "󰗆", fg = "#cec0ea" },
+	{ name = "rs", text = "", fg = "#cec0ea" },
+	{ name = "rss", text = "", fg = "#cec0ea" },
+	{ name = "s", text = "", fg = "#cec0ea" },
+	{ name = "sass", text = "", fg = "#cec0ea" },
+	{ name = "sbt", text = "", fg = "#cec0ea" },
+	{ name = "sc", text = "", fg = "#cec0ea" },
+	{ name = "scad", text = "", fg = "#cec0ea" },
+	{ name = "scala", text = "", fg = "#cec0ea" },
+	{ name = "scm", text = "󰘧", fg = "#cec0ea" },
+	{ name = "scss", text = "", fg = "#cec0ea" },
+	{ name = "sh", text = "", fg = "#cec0ea" },
+	{ name = "sha1", text = "󰕥", fg = "#cec0ea" },
+	{ name = "sha224", text = "󰕥", fg = "#cec0ea" },
+	{ name = "sha256", text = "󰕥", fg = "#cec0ea" },
+	{ name = "sha384", text = "󰕥", fg = "#cec0ea" },
+	{ name = "sha512", text = "󰕥", fg = "#cec0ea" },
+	{ name = "sig", text = "󰘧", fg = "#cec0ea" },
+	{ name = "signature", text = "󰘧", fg = "#cec0ea" },
+	{ name = "skp", text = "󰻫", fg = "#cec0ea" },
+	{ name = "sldasm", text = "󰻫", fg = "#cec0ea" },
+	{ name = "sldprt", text = "󰻫", fg = "#cec0ea" },
+	{ name = "slim", text = "", fg = "#cec0ea" },
+	{ name = "sln", text = "", fg = "#cec0ea" },
+	{ name = "slnx", text = "", fg = "#cec0ea" },
+	{ name = "slvs", text = "󰻫", fg = "#cec0ea" },
+	{ name = "sml", text = "󰘧", fg = "#cec0ea" },
+	{ name = "so", text = "", fg = "#cec0ea" },
+	{ name = "sol", text = "", fg = "#cec0ea" },
+	{ name = "spec.js", text = "", fg = "#cec0ea" },
+	{ name = "spec.jsx", text = "", fg = "#cec0ea" },
+	{ name = "spec.ts", text = "", fg = "#cec0ea" },
+	{ name = "spec.tsx", text = "", fg = "#cec0ea" },
+	{ name = "spx", text = "", fg = "#cec0ea" },
+	{ name = "sql", text = "", fg = "#cec0ea" },
+	{ name = "sqlite", text = "", fg = "#cec0ea" },
+	{ name = "sqlite3", text = "", fg = "#cec0ea" },
+	{ name = "srt", text = "󰨖", fg = "#cec0ea" },
+	{ name = "ssa", text = "󰨖", fg = "#cec0ea" },
+	{ name = "ste", text = "󰻫", fg = "#cec0ea" },
+	{ name = "step", text = "󰻫", fg = "#cec0ea" },
+	{ name = "stl", text = "󰆧", fg = "#cec0ea" },
+	{ name = "stories.js", text = "", fg = "#cec0ea" },
+	{ name = "stories.jsx", text = "", fg = "#cec0ea" },
+	{ name = "stories.mjs", text = "", fg = "#cec0ea" },
+	{ name = "stories.svelte", text = "", fg = "#cec0ea" },
+	{ name = "stories.ts", text = "", fg = "#cec0ea" },
+	{ name = "stories.tsx", text = "", fg = "#cec0ea" },
+	{ name = "stories.vue", text = "", fg = "#cec0ea" },
+	{ name = "stp", text = "󰻫", fg = "#cec0ea" },
+	{ name = "strings", text = "", fg = "#cec0ea" },
+	{ name = "styl", text = "", fg = "#cec0ea" },
+	{ name = "sub", text = "󰨖", fg = "#cec0ea" },
+	{ name = "sublime", text = "", fg = "#cec0ea" },
+	{ name = "suo", text = "", fg = "#cec0ea" },
+	{ name = "sv", text = "󰍛", fg = "#cec0ea" },
+	{ name = "svelte", text = "", fg = "#cec0ea" },
+	{ name = "svg", text = "󰜡", fg = "#cec0ea" },
+	{ name = "svgz", text = "󰜡", fg = "#cec0ea" },
+	{ name = "svh", text = "󰍛", fg = "#cec0ea" },
+	{ name = "swift", text = "", fg = "#cec0ea" },
+	{ name = "t", text = "", fg = "#cec0ea" },
+	{ name = "tbc", text = "󰛓", fg = "#cec0ea" },
+	{ name = "tcl", text = "󰛓", fg = "#cec0ea" },
+	{ name = "templ", text = "", fg = "#cec0ea" },
+	{ name = "terminal", text = "", fg = "#cec0ea" },
+	{ name = "test.js", text = "", fg = "#cec0ea" },
+	{ name = "test.jsx", text = "", fg = "#cec0ea" },
+	{ name = "test.ts", text = "", fg = "#cec0ea" },
+	{ name = "test.tsx", text = "", fg = "#cec0ea" },
+	{ name = "tex", text = "", fg = "#cec0ea" },
+	{ name = "tf", text = "", fg = "#cec0ea" },
+	{ name = "tfvars", text = "", fg = "#cec0ea" },
+	{ name = "tgz", text = "", fg = "#cec0ea" },
+	{ name = "tmpl", text = "", fg = "#cec0ea" },
+	{ name = "tmux", text = "", fg = "#cec0ea" },
+	{ name = "toml", text = "", fg = "#cec0ea" },
+	{ name = "torrent", text = "", fg = "#cec0ea" },
+	{ name = "tres", text = "", fg = "#cec0ea" },
+	{ name = "ts", text = "", fg = "#cec0ea" },
+	{ name = "tscn", text = "", fg = "#cec0ea" },
+	{ name = "tsconfig", text = "", fg = "#cec0ea" },
+	{ name = "tsx", text = "", fg = "#cec0ea" },
+	{ name = "ttf", text = "", fg = "#cec0ea" },
+	{ name = "twig", text = "", fg = "#cec0ea" },
+	{ name = "txt", text = "󰈙", fg = "#cec0ea" },
+	{ name = "txz", text = "", fg = "#cec0ea" },
+	{ name = "typ", text = "", fg = "#cec0ea" },
+	{ name = "typoscript", text = "", fg = "#cec0ea" },
+	{ name = "ui", text = "", fg = "#cec0ea" },
+	{ name = "v", text = "󰍛", fg = "#cec0ea" },
+	{ name = "vala", text = "", fg = "#cec0ea" },
+	{ name = "vert", text = "", fg = "#cec0ea" },
+	{ name = "vh", text = "󰍛", fg = "#cec0ea" },
+	{ name = "vhd", text = "󰍛", fg = "#cec0ea" },
+	{ name = "vhdl", text = "󰍛", fg = "#cec0ea" },
+	{ name = "vi", text = "", fg = "#cec0ea" },
+	{ name = "vim", text = "", fg = "#cec0ea" },
+	{ name = "vsh", text = "", fg = "#cec0ea" },
+	{ name = "vsix", text = "", fg = "#cec0ea" },
+	{ name = "vue", text = "", fg = "#cec0ea" },
+	{ name = "wasm", text = "", fg = "#cec0ea" },
+	{ name = "wav", text = "", fg = "#cec0ea" },
+	{ name = "webm", text = "", fg = "#cec0ea" },
+	{ name = "webmanifest", text = "", fg = "#cec0ea" },
+	{ name = "webp", text = "", fg = "#cec0ea" },
+	{ name = "webpack", text = "󰜫", fg = "#cec0ea" },
+	{ name = "wma", text = "", fg = "#cec0ea" },
+	{ name = "wmv", text = "", fg = "#cec0ea" },
+	{ name = "woff", text = "", fg = "#cec0ea" },
+	{ name = "woff2", text = "", fg = "#cec0ea" },
+	{ name = "wrl", text = "󰆧", fg = "#cec0ea" },
+	{ name = "wrz", text = "󰆧", fg = "#cec0ea" },
+	{ name = "wv", text = "", fg = "#cec0ea" },
+	{ name = "wvc", text = "", fg = "#cec0ea" },
+	{ name = "x", text = "", fg = "#cec0ea" },
+	{ name = "xaml", text = "󰙳", fg = "#cec0ea" },
+	{ name = "xcf", text = "", fg = "#cec0ea" },
+	{ name = "xcplayground", text = "", fg = "#cec0ea" },
+	{ name = "xcstrings", text = "", fg = "#cec0ea" },
+	{ name = "xls", text = "󰈛", fg = "#cec0ea" },
+	{ name = "xlsx", text = "󰈛", fg = "#cec0ea" },
+	{ name = "xm", text = "", fg = "#cec0ea" },
+	{ name = "xml", text = "󰗀", fg = "#cec0ea" },
+	{ name = "xpi", text = "", fg = "#cec0ea" },
+	{ name = "xslt", text = "󰗀", fg = "#cec0ea" },
+	{ name = "xul", text = "", fg = "#cec0ea" },
+	{ name = "xz", text = "", fg = "#cec0ea" },
+	{ name = "yaml", text = "", fg = "#cec0ea" },
+	{ name = "yml", text = "", fg = "#cec0ea" },
+	{ name = "zig", text = "", fg = "#cec0ea" },
+	{ name = "zip", text = "", fg = "#cec0ea" },
+	{ name = "zsh", text = "", fg = "#cec0ea" },
+	{ name = "zst", text = "", fg = "#cec0ea" },
+	{ name = "🔥", text = "", fg = "#cec0ea" },
+]
+conds = [
+	# Special files
+	{ if = "orphan", text = "", fg = "#cec0ea" },
+	{ if = "link", text = "", fg = "#cec0ea" },
+	{ if = "block", text = "", fg = "#cec0ea" },
+	{ if = "char", text = "", fg = "#cec0ea" },
+	{ if = "fifo", text = "", fg = "#cec0ea" },
+	{ if = "sock", text = "", fg = "#cec0ea" },
+	{ if = "sticky", text = "", fg = "#cec0ea" },
+	{ if = "dummy", text = "", fg = "#cec0ea" },
+
+	# Fallback
+	{ if = "dir", text = "", fg = "#cec0ea" },
+	{ if = "exec", text = "", fg = "#cec0ea" },
+	{ if = "!dir", text = "", fg = "#cec0ea" },
+]
+
+# : }}}

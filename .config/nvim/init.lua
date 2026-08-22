@@ -853,7 +853,7 @@ require('lazy').setup({
         lualine_z = { 'location' },
       },
       options = {
-        theme = 'nord',
+        theme = 'base16',
         component_separators = { left = '󰅮', right = '󰅮' },
         section_separators = { left = '', right = '' },
       },
@@ -1006,6 +1006,11 @@ require('lazy').setup({
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 -- COLORSCHEME
-vim.cmd 'colorscheme nord'
+-- vim.cmd 'colorscheme nord'
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'LineNrAbove', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'LineNrBelow', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })

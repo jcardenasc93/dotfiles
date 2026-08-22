@@ -1,4 +1,4 @@
 theme = noctalia
-background-opacity = 0.95
+background-opacity = 0.85
 
 keybind = ctrl+v=paste_from_clipboard
